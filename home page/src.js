@@ -9,6 +9,17 @@ function exit(id){
 }
 
 
+//THIS IS NOT WORKING WHYYYY
+
+// window.addEventListener("load", function randomize(){
+//     var r;
+//     var list = document.getElementsByClassName("randomize")
+//     for(var i=0;i<36;i++){
+//         r = Math.floor(Math.random()*200);
+//         list[i].style.margin = r + "px";
+//     }
+// });
+
 
 
 dragElement(document.getElementById("element"));
