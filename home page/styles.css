@@ -94,7 +94,7 @@ html::-webkit-scrollbar {
 /* BULLETIN BOARD */
 
 
-#element {
+#welcome {
     /*float: left;*/
     position: absolute;
     z-index: 8;
@@ -110,7 +110,7 @@ html::-webkit-scrollbar {
     box-shadow: 5px 2.5px gray;
 }
 
-#header {
+#welcome-header {
     position: sticky;
     z-index: 9;
     cursor: move;
@@ -128,7 +128,7 @@ html::-webkit-scrollbar {
 
 }
 
-#x-btn {
+#welcome-x-btn {
     position: absolute;
     z-index: 10;
     right: 0;
@@ -147,3 +147,56 @@ html::-webkit-scrollbar {
 }
 
 /*rgb(143, 226, 143)*/
+
+
+#zine {
+    /*float: left;*/
+    position: absolute;
+    z-index: 8;
+    overflow: auto;
+
+    text-align: center;
+
+    width: fit-content;
+    height: fit-content;
+
+    background-color: white;
+    border: 2px solid gray;
+    box-shadow: 5px 2.5px gray;
+}
+
+#zine-header {
+    position: sticky;
+    z-index: 9;
+    cursor: move;
+
+    text-align: left;
+
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 98%;
+
+    background-color: darkgray;
+    border: 1px solid gray;
+    color: #fff;
+
+}
+
+#zine-x-btn {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+    width: 30px;
+
+    background: red;
+    color: white;
+    border: 2px solid darkred;
+}
