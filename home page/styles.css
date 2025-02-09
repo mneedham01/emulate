@@ -110,45 +110,6 @@ html::-webkit-scrollbar {
     box-shadow: 5px 2.5px gray;
 }
 
-#welcome-header {
-    position: sticky;
-    z-index: 9;
-    cursor: move;
-
-    text-align: left;
-
-    top: 0;
-    left: 0;
-    height: 30px;
-    width: 248px;
-
-    background-color: darkgray;
-    border: 1px solid gray;
-    color: #fff;
-
-}
-
-#welcome-x-btn {
-    position: absolute;
-    z-index: 10;
-    right: 0;
-    top: 0;
-
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-
-    height: 30px;
-    width: 30px;
-
-    background: red;
-    color: white;
-    border: 2px solid darkred;
-}
-
-/*rgb(143, 226, 143)*/
-
-
 #zine {
     /*float: left;*/
     position: absolute;
@@ -165,7 +126,7 @@ html::-webkit-scrollbar {
     box-shadow: 5px 2.5px gray;
 }
 
-#zine-header {
+.bulletin-header {
     position: sticky;
     z-index: 9;
     cursor: move;
@@ -175,7 +136,7 @@ html::-webkit-scrollbar {
     top: 0;
     left: 0;
     height: 30px;
-    width: 98%;
+    width: 99%;
 
     background-color: darkgray;
     border: 1px solid gray;
@@ -183,7 +144,7 @@ html::-webkit-scrollbar {
 
 }
 
-#zine-x-btn {
+.x-btn {
     position: absolute;
     z-index: 10;
     right: 0;
