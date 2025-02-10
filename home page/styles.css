@@ -18,8 +18,114 @@
     margin: auto;
 }
 
+/*<<<<<<< HEAD*/
+.emulating span:nth-child(2) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .2s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .2s;
+}
+
+.emulating span:nth-child(3) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .4s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .4s;
+}
+
+
+/* NAV BAR */
+.navigation {
+    position: fixed;
+    width: 100%;
+}
+
+.EMULATE {
+    font-family: "Spectral", serif;
+    font-style: italic;
+}
+
+
+
+
+
+/* BULLETIN BOARD */
+.bulletin {
+    /*float: left;*/
+    position: absolute;
+    z-index: 8;
+    overflow-x: hidden;
+    -ms-overflow-x: hidden;
+    /*overflow: auto;*/
+    /*top: 15%;*/
+}
+
+.bulletin-header {
+    position: sticky;
+    z-index: 9;
+    cursor: move;
+
+    text-align: left;
+
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+
+    background-color: darkgray;
+    border: 2px solid gray;
+    color: dimgray;
+    font-weight: bold;
+    font-family: "Silkscreen", "Chakra Petch", monospace;
+
+}
+
+.x-btn {
+    position: absolute;
+    z-index: 10;
+    right: 2px;
+    top: 0;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+    width: 30px;
+
+    background: red;
+    color: white;
+    border: 2px solid darkred;
+}
+
+#welcome {
+    text-align: center;
+
+    width: 250px;
+    height: 250px;
+
+    background-color: white;
+    border: 2px solid gray;
+    box-shadow: 5px 2.5px gray;
+    font-family: "Spectral", monospace;
+}
+
+#zine {
+    /*width: fit-content;*/
+    height: fit-content;
+
+    background-color: white;
+    border: 2px solid gray;
+    box-shadow: 5px 3px gray;
+}
+/*=======*/
 .shape{
     width: 50px;
     height: 50px;
     margin:auto;
 }
+/*>>>>>>> 83939078cdd50675a1a52e71cf694268e13c3c06*/
