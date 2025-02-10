@@ -2,23 +2,33 @@
     height: fit-content;
 }
 
+.archive-element {
+    z-index:0;
+}
+
 .archive-viewer {
-    position: relative;
+    position: fixed;
     display: none;
     margin: auto;
+    z-index: 999;
 
     justify-content: center;
     align-items: center;
-    height: 75vh;
-    width: 75%;
+    height: 90vh;
+    width: 90%;
 
-    background-color: bisque;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.hover {
+    background-color: darkred;
+    color: white;
+    font-family: monospace;
 }
 
 #move{
     display: none;
-    background-color: darkred;
-    color: white;
 
     height: 50px;
     aspect-ratio: 1;

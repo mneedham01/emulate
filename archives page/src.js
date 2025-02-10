@@ -1,3 +1,5 @@
+const move = document.getElementById("move");
+
 function popup(iD){
     var x = document.getElementById(iD);
     if(x.style.display === "none"){
@@ -10,27 +12,25 @@ function popupHover(iD){
     var x = document.getElementById(iD);
     x.style.display = "block"
 
+    document.body.onpointermove = event => {
+        const { clientX, clientY } = event;
+
+        move.animate({
+            left: `${clientX}px`,
+            top: `${clientY}px`
+
+        }, {duration: 1000, fill: "forwards"})
+
+    }
+
 
 }
 function openViewer(iD){
     var x = document.getElementById(iD);
-    x.style.display = "flex"
+    x.style.display = "block"
 
 }
 function popupExit(iD){
     var x = document.getElementById(iD);
     x.style.display = "none"
-}
-
-const move = document.getElementById("move");
-
-document.body.onpointermove = event => {
-    const { clientX, clientY } = event;
-
-    move.animate({
-        left: `${clientX}px`,
-        top: `${clientY}px`
-
-    }, {duration: 1000, fill: "forwards"})
-
 }
