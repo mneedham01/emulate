@@ -1,13 +1,21 @@
+body {
+    display: flex;
+    position: relative;
+}
+
 .container {
     height: fit-content;
+    width: fit-content;
+
 }
 
 .archive-element {
     z-index:0;
+    background-color: black;
 }
 
 .archive-viewer {
-    position: fixed;
+    position: absolute;
     display: none;
     margin: auto;
     z-index: 999;
@@ -18,24 +26,53 @@
     width: 90%;
 
     border: 2px solid black;
+    box-shadow: 5px 3px black;
     background-color: white;
 }
 
-.hover {
-    background-color: darkred;
+img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
+img:hover {
+    -webkit-filter: grayscale(0%);
+    filter: none;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    /*pointer-events: none*/
+
+    background-color: black;
     color: white;
-    font-family: monospace;
+    border: 0;
+    border-radius: .25em;
+    font-family: "Darumadrop One", monospace;
 }
 
 #move{
     display: none;
 
-    height: 50px;
-    aspect-ratio: 1;
+    height: fit-content;
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
     position: fixed;
+}
+
+.x-btn{
+    position: absolute;
+    right: 0;
+    top:0;
+
+    width: 30px;
+    height: 30px;
+
+    border: 2px solid white;
 }
 
 /*.enter-hover {*/

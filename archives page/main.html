@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darumadrop One">
+
     <title>Emulate Archives</title>
 </head>
 <body>
@@ -21,13 +23,14 @@
 <!--    </div>-->
 <!--</div>-->
 <div class="container">
-    <div class="archive-element" onmouseover="popupHover('move')" onmouseout="popupExit('move')">
-        <img src="/archive/Fall%202024%20Zine%20pngs/1.png" alt="Zine Cover" style="max-height:50vh;">
+    <div class="archive-element" onmouseover="hover('move')" onmouseout="exit('move')">
+        <img id="zine1" class="greyscale" src="/archive/Fall%202024%20Zine%20pngs/1.png" alt="Zine Cover" style="max-height:50vh;">
     </div>
-    <button class="hover" id="move" onclick="openViewer('viewer');">ENTER</button>
+    <button class="button" id="move" onclick="openViewer('viewer', 'zine1');">eNteR</button>
 </div>
 
 <div class="archive-viewer" id="viewer">
+    <button class="button x-btn" onclick="exit('viewer')">X</button>
 
 </div>
 

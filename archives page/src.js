@@ -8,29 +8,34 @@ function popup(iD){
         x.style.display = "none";
     }
 }
-function popupHover(iD){
-    var x = document.getElementById(iD);
-    x.style.display = "block"
+// document.getElementById("zine1").addEventListener("mouseover", hover("move"));
+// document.getElementById("zine1").addEventListener("mouseout", exit("move"));
 
-    document.body.onpointermove = event => {
-        const { clientX, clientY } = event;
+document.body.onpointermove = event => {
+    const { clientX, clientY } = event;
 
-        move.animate({
-            left: `${clientX}px`,
-            top: `${clientY}px`
+    move.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`
 
-        }, {duration: 1000, fill: "forwards"})
-
-    }
-
+    }, {duration: 1000, fill: "forwards"})
 
 }
-function openViewer(iD){
+function hover(iD){
     var x = document.getElementById(iD);
     x.style.display = "block"
-
 }
-function popupExit(iD){
+
+function exit(iD){
     var x = document.getElementById(iD);
     x.style.display = "none"
 }
+
+function openViewer(iD, elmtID){
+    var elmt = document.getElementById(elmtID)
+    var x = document.getElementById(iD);
+    x.style.display = "block"
+
+}
+
+
