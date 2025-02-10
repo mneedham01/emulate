@@ -43,6 +43,9 @@ header {
     margin: 20px;
     width: 75%;
 }
+img:hover{
+    cursor: zoom-in;
+}
 
 * {
     box-sizing: border-box;
