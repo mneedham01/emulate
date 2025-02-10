@@ -5,6 +5,8 @@
   <title>Emulate</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra Petch">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Silkscreen">
 </head>
 <body>
 <!--LOADING PAGE-->
@@ -26,27 +28,40 @@
 
 
 <!--BULLETIN BOARD-->
-<div class="randomize" id="welcome">
-  <div class="bulletin-header" id="welcome-header">
-    About
-    <button class="x-btn" id="welcome-x-btn" onclick="exit('welcome')">x</button>
-  </div>
-  <div class="content">
+<div class="bulletin-board" id="bulletin-board">
+    <div class="randomize bulletin" id="welcome">
+        <div class="bulletin-header" id="welcome-header">
+            About
+            <button class="x-btn" id="welcome-x-btn" onclick="exit('welcome')">x</button>
+        </div>
+        <div class="content">
 
-  </div>
-  <h2> WElcome to Emulate!!</h2>
+        </div>
+        <h2> WElcome to Emulate!!</h2>
+    </div>
+
+
+    <div class="randomize bulletin" id="zine">
+        <div class="bulletin-header" id="zine-header">
+            Fall 2024 ZINE
+            <button class="x-btn" id="zine-x-btn" onclick="exit('zine')">x</button>
+        </div>
+        <div class="content">
+            <img src="/archive/Fall%202024%20Zine%20pngs/1.png" alt="Zine Cover" style="max-height:50vh;">
+        </div>
+    </div>
+
+    <!--<div class="randomize bulletin" id="menu">-->
+    <!--    <div class="bulletin-header" id="menu-header">-->
+    <!--        Navigation Menu-->
+    <!--        <button class="x-btn" id="menu-x-btn" >x</button>-->
+    <!--    </div>-->
+    <!--    <div class="content">-->
+
+    <!--    </div>-->
+    <!--</div>-->
 </div>
 
-
-<div class="randomize" id="zine">
-    <div class="bulletin-header" id="zine-header">
-        Fall 2024 ZINE
-        <button class="x-btn" id="zine-x-btn" onclick="exit('zine')">x</button>
-    </div>
-    <div class="content">
-        <img src="/archive/Fall%202024%20Zine%20pngs/1.png" alt="Zine Cover" style="width:40%;height:40%;">
-    </div>
-</div>
 
 </body>
 

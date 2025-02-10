@@ -1,0 +1,43 @@
+.container {
+    height: fit-content;
+}
+
+.archive-viewer {
+    position: relative;
+    display: none;
+    margin: auto;
+
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 75%;
+
+    background-color: bisque;
+}
+
+#move{
+    display: none;
+    background-color: darkred;
+    color: white;
+
+    height: 50px;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+/*.enter-hover {*/
+/*    position: fixed;*/
+/*    background-color: #4b5263;*/
+/*    color: #abb2bf;*/
+/*    display: none;*/
+/*    top: 4em;*/
+/*    left: 4em;*/
+
+/*    font-size: small;*/
+/*    padding: .5em 3em .5em .5em;*/
+
+/*    z-index: 9999;*/
+/*}*/
