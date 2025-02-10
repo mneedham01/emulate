@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    position: relative;
+    margin:0;
+}
+
 html::-webkit-scrollbar {
     display: none;
 }
@@ -10,11 +16,14 @@ html::-webkit-scrollbar {
 .loading-page {
     z-index: 999;
     display: flex;
+    position: absolute;
+
     text-align: center;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100vh;
+    margin: 0;
 
     font-family: 'Spectral', 'Courier New', monospace;
     background: white;
@@ -80,8 +89,10 @@ html::-webkit-scrollbar {
 
 /* NAV BAR */
 .navigation {
+    text-align: center;
     position: fixed;
     width: 100%;
+    /*top: 0;*/
 }
 
 .EMULATE {
@@ -94,6 +105,17 @@ html::-webkit-scrollbar {
 
 
 /* BULLETIN BOARD */
+.bulletin-board{
+    display: block;
+    position: center;
+    margin: 25% auto auto;
+    top: 25vh;
+
+    height: 75vh;
+    width: 75%;
+
+    background-color: darkolivegreen;
+}
 .bulletin {
     /*float: left;*/
     position: absolute;
@@ -102,6 +124,10 @@ html::-webkit-scrollbar {
     -ms-overflow-x: hidden;
     /*overflow: auto;*/
     /*top: 15%;*/
+    background-color: white;
+    border: 2px solid gray;
+    box-shadow: 5px 2.5px black;
+
 }
 
 .bulletin-header {
@@ -148,17 +174,8 @@ html::-webkit-scrollbar {
     width: 250px;
     height: 250px;
 
-    background-color: white;
-    border: 2px solid gray;
-    box-shadow: 5px 2.5px gray;
-    /*font-family: "Silkscreen", "Chakra Petch", monospace;*/
 }
 
 #zine {
-    /*width: fit-content;*/
     height: fit-content;
-
-    background-color: white;
-    border: 2px solid gray;
-    box-shadow: 5px 3px gray;
 }
