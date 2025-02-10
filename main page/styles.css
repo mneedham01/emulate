@@ -89,6 +89,7 @@ html::-webkit-scrollbar {
 
 /* NAV BAR */
 .navigation {
+    text-align: center;
     position: fixed;
     width: 100%;
     /*top: 0;*/
@@ -172,18 +173,9 @@ html::-webkit-scrollbar {
 
     width: 250px;
     height: 250px;
-    /*font-family: "Silkscreen", "Chakra Petch", monospace;*/
 
-    /*background-color: white;*/
-    /*border: 2px solid gray;*/
-    /*box-shadow: 5px 3px black;*/
 }
 
 #zine {
-    /*width: fit-content;*/
     height: fit-content;
-
-    /*background-color: white;*/
-    /*border: 2px solid gray;*/
-    /*box-shadow: 5px 3px black;*/
 }
