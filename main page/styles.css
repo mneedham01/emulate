@@ -2,11 +2,12 @@ body {
     display: flex;
     position: relative;
     margin:0;
+
 }
 
-/*html::-webkit-scrollbar {*/
-/*    display: none;*/
-/*}*/
+html::-webkit-scrollbar {
+    display: none;
+}
 
 .loading-page p {
     font-size: xx-large;
@@ -106,15 +107,15 @@ body {
 
 /* BULLETIN BOARD */
 .bulletin-board{
-    display: block;
     position: center;
     margin: 25% auto auto;
-    top: 25vh;
+    top: 15%;
 
-    height: 75vh;
-    width: 75%;
+    height: 80vh;
+    width: 80%;
 
     background-color: white;
+    border: 1px solid black;
 }
 /*.bulletin::-webkit-scrollbar-track{*/
 /*    background-color: white;*/
@@ -215,4 +216,26 @@ body {
 
 #zine {
     height: fit-content;
+}
+
+
+
+/*.def{*/
+/*    position: absolute;*/
+/*    bottom: 2%;*/
+/*    right: 2%;*/
+
+/*    text-align: center;*/
+/*    */
+/*    border: 1px solid black;*/
+/*}*/
+
+.spacer{
+    position: absolute;
+    bottom: 0;
+
+    height: 10vh;
+    width: 100%;
+
+    background-color: blue;
 }
