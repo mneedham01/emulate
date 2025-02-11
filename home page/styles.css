@@ -7,28 +7,34 @@
     margin: auto;
 }
 
-.main-box{
+.main-box {
     display: grid;
-    grid-template-columns: [sidep1-left] 2fr [sidep1-right margin1-left] 2fr [margin1-right image-left] 4fr [image-right margin2-left] 2fr [margin2-right sidep2-left] 2fr [sidep2-right];
+    grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    background-color:blue;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
-
-.artwork{
-    grid-column-start: image-left;
-    grid-column-end: image-right;
-    grid-row-start:  0;
-    grid-row-end: auto;
+    
+.right-margin { grid-area: 1 / 9 / 6 / 11; z-index:0;}
+.left-margin { grid-area: 1 / 1 / 6 / 3;}
+.artwork { grid-area: 1 / 4 / 5 / 8; background-color:aliceblue}
+.apple1 { grid-area: 1 / 3 / 2 / 5;}
+.apple2 { grid-area: 2 / 7 / 3 / 9; z-index:1;}
+.apple3 { grid-area: 2 / 3 / 3 / 5;}
+.button{
+    display: block;
+    background-color: transparent;
+    max-width: 90%;
+    border: none;
+    background-size: cover;
+    height: auto;
 }
-
-.apple{
-    width: 145px;
-    height: 159px;
-    left: 150 px; 
-    z-index: 1;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+.img{
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*<<<<<<< HEAD*/
