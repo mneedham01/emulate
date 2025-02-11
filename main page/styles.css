@@ -4,9 +4,9 @@ body {
     margin:0;
 }
 
-html::-webkit-scrollbar {
-    display: none;
-}
+/*html::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
 
 .loading-page p {
     font-size: xx-large;
@@ -116,23 +116,48 @@ html::-webkit-scrollbar {
 
     background-color: white;
 }
+/*.bulletin::-webkit-scrollbar-track{*/
+/*    background-color: white;*/
+/*}*/
+/*.bulletin::-webkit-scrollbar-thumb{*/
+/*    background-color: black;*/
+/*}*/
+/*.bulletin::-webkit-scrollbar-thumb:hover {*/
+/*    background: blue;*/
+/*}*/
+
 .bulletin:active{
     cursor: grabbing;
 }
 .bulletin {
     cursor: grab;
     position: absolute;
+    display: grid;
     z-index: 8;
     overflow-x: hidden;
     -ms-overflow-x: hidden;
 
-    text-align: start;
-
     background-color: white;
     border: 1px solid black;
-    box-shadow: 5px 2.5px black;
+    box-shadow: 5px 5px black;
 
     font-family: NT Bau Mono, monospace;
+}
+
+.content {
+    overflow-y: auto;
+    background-color: white;
+    /**/
+    scrollbar-color: black whitesmoke;
+    scrollbar-gutter: auto;
+    /*scrollbar-width: thin;*/
+
+    text-align: start;
+}
+
+.content p{
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .bulletin-header:active{

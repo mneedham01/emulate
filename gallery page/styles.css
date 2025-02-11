@@ -8,6 +8,18 @@ body {
     margin: 0;
 
 }
+a:link{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: hotpink;
+}
+
 header {
     position: fixed;
     z-index: 999;
