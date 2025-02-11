@@ -11,7 +11,6 @@ body {
 
 .archive-element {
     z-index:0;
-    background-color: black;
 }
 
 .archive-viewer {
@@ -49,8 +48,7 @@ img:hover {
     background-color: black;
     color: white;
     border: 0;
-    border-radius: .25em;
-    font-family: "Darumadrop One", monospace;
+    font-family: NT Bau Mono, monospace;
 }
 
 #move{

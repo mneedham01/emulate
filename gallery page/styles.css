@@ -8,6 +8,18 @@ body {
     margin: 0;
 
 }
+a:link{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: hotpink;
+}
+
 header {
     position: fixed;
     z-index: 999;
@@ -45,7 +57,14 @@ header {
 }
 img:hover{
     cursor: zoom-in;
+    -webkit-filter: grayscale(0%);
+    filter: none;
 }
+img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
 
 * {
     box-sizing: border-box;
