@@ -1,4 +1,4 @@
-
+//want to figure out a way to automatically read in how many photos there are in a directory
 
 for(let i=1; i < 26; i++){
     var img = document.createElement('img');
