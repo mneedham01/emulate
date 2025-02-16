@@ -34,7 +34,7 @@ header {
 
 .row{
     position: absolute;
-    animation: scroll 200s linear infinite;
+    animation: scroll 500s linear infinite;
     top: 20%;
 }
 
