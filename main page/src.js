@@ -1,3 +1,12 @@
+function highlight(){
+    document.getElementById("title").style.color = "darkred";
+}
+function unhighlight(){
+    document.getElementById("title").style.color = "black";
+}
+function exit(id){
+    document.getElementById(id).style.display = "none";
+}
 
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("zine"));
