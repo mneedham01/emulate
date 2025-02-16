@@ -8,6 +8,9 @@ function exit(id){
     document.getElementById(id).style.display = "none";
 }
 
+// window.addEventListener("click", function goHome(){
+//     window.open("../home page/home.html");
+// });
 
 //THIS IS NOT WORKING WHYYYY
 
