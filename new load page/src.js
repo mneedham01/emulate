@@ -1,10 +1,8 @@
 function random_rotate(){
     // chooses between -30 and 30 degrees 
-    var zerotothirty= Math.floor(Math.random, 31);
-    var binary = Math.random > 0.5? -1: 1; 
-    var degree =  zerotothirty * binary;
+    const min = -30;
+    const max = 30;
+    var degree = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    
-    document.getElementById("e_image").style.transform = "rotate(30deg)";
-    // document.getElementById(id).style.transform("rotate(90deg)");
+    document.getElementById("e_image").style.transform = "rotate("+ degree.toString() + "deg)";
 }
