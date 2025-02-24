@@ -1,5 +1,5 @@
 setInterval(function call_random_rotate() {
-    ids = ["e_image", "m_image", "u_image", "l_image", "a_image", "t_image", "e1_image"]
+    let ids = ["e_image", "m_image", "u_image", "l_image", "a_image", "t_image", "e1_image"]
     for (var id of ids) {
         random_rotate(id);
     }

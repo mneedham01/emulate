@@ -74,6 +74,14 @@ img {
     box-sizing: border-box;
 }
 
+#zoomed{
+    width: 70%;
+    height: 70vh;
+    margin: auto;
+
+    display: none;
+}
+
 
 @keyframes scroll {
     0% {
