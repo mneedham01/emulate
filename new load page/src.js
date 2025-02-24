@@ -3,7 +3,7 @@ setInterval(function call_random_rotate() {
     for (var id of ids) {
         random_rotate(id);
     }
-}, 500);
+}, 1000);
 
 function random_rotate(id){
     // chooses between -30 and 30 degrees 
@@ -12,4 +12,10 @@ function random_rotate(id){
     var degree = Math.floor(Math.random() * (max - min + 1)) + min;
 
     document.getElementById(id).style.transform = "rotate("+ degree.toString() + "deg)";
+}
+
+window.addEventListener("click", enterPage);
+
+function enterPage(){
+    window.location.href = '../home page/home.html';
 }

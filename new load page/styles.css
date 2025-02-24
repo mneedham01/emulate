@@ -1,6 +1,10 @@
-.container {  
+body {
+    overflow: hidden;
+}
+
+.container {
     height: 100vh;
-    width: 100vh;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 25% 50% 25%;
@@ -31,7 +35,7 @@
   .img{
     display: block;
     height: 10vh;
-    width: 90%;
+    /*width: 90%;*/
     margin-left: auto;
     margin-right: auto;
   }
