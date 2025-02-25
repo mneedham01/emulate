@@ -6,6 +6,8 @@ body {
     display: flex;
     position: relative;
     margin:0;
+    background-color: #fffaf0;
+
 
 }
 
@@ -24,7 +26,7 @@ a:hover{
 
 
 /* NAV BAR */
-.navigation {
+.header {
     text-align: center;
     position: fixed;
     width: 100%;
@@ -49,7 +51,7 @@ a:hover{
     height: 80vh;
     width: 80%;
 
-    background-color: white;
+    background-color: #fffaf0;
     border: 1px solid black;
 }
 /*.bulletin::-webkit-scrollbar-track{*/
@@ -73,7 +75,7 @@ a:hover{
     overflow-x: hidden;
     -ms-overflow-x: hidden;
 
-    background-color: white;
+    background-color: #fffaf0;
     border: 1px solid black;
     box-shadow: 5px 5px black;
 
@@ -82,9 +84,9 @@ a:hover{
 
 .content {
     overflow-y: auto;
-    background-color: white;
+    background-color: #fffaf0;
     /**/
-    scrollbar-color: black whitesmoke;
+    scrollbar-color: black #fffaf0;
     scrollbar-gutter: auto;
     /*scrollbar-width: thin;*/
 
@@ -116,7 +118,7 @@ a:hover{
     height: 30px;
     width: 100%;
 
-    background-color: white;
+    background-color: #fffaf0;
     border-bottom: 1px solid black;
     color: black;
     font-family: NT Bau Mono, monospace;
@@ -138,7 +140,7 @@ a:hover{
     width: 30px;
 
     background: red;
-    color: white;
+    color: #fffaf0;
     border: 2px solid darkred;
     font-family: NT Bau Mono, monospace;
 }
@@ -172,5 +174,5 @@ a:hover{
     height: 10vh;
     width: 100%;
 
-    background-color: blue;
+    /*background-color: blue;*/
 }
