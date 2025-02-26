@@ -1,105 +1,47 @@
 body {
-    display: flex;
-    position: relative;
-    margin:0;
-
+    overflow: hidden;
+    background-color: #fffaf0;
 }
 
-html::-webkit-scrollbar {
-    display: none;
-}
-
-.loading-page p {
-    font-size: xx-large;
-    font-weight: bold;
-}
-
-.loading-page {
-    z-index: 999;
-    display: flex;
-    position: absolute;
-
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.container {
     height: 100vh;
-    margin: 0;
-
-    font-family: 'Spectral', 'Courier New', monospace;
-    background: white;
-
-    border: 0px;
-}
-@keyframes blink {
-
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.emulating span {
-    /**
-     * Use the blink animation, which is defined above
-     */
-    animation-name: blink;
-    /**
-     * The animation should take 1.4 seconds
-     */
-    animation-duration: 1.4s;
-    /**
-     * It will repeat itself forever
-     */
-    animation-iteration-count: infinite;
-    /**
-     * This makes sure that the starting style (opacity: .2)
-     * of the animation is applied before the animation starts.
-     * Otherwise we would see a short flash or would have
-     * to set the default styling of the dots to the same
-     * as the animation. Same applies for the ending styles.
-     */
-    animation-fill-mode: both;
-}
-
-.emulating span:nth-child(2) {
-    /**
-     * Starts the animation of the third dot
-     * with a delay of .2s, otherwise all dots
-     * would animate at the same time
-     */
-    animation-delay: .2s;
-}
-
-.emulating span:nth-child(3) {
-    /**
-     * Starts the animation of the third dot
-     * with a delay of .4s, otherwise all dots
-     * would animate at the same time
-     */
-    animation-delay: .4s;
-}
-
-
-/* NAV BAR */
-.navigation {
-    text-align: center;
-    position: fixed;
     width: 100%;
-    /*top: 0;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25% 50% 25%;
+    gap: 0 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . e m u l a t i n g --- . ."
+      ". . . . . . . . . . . . . ."
 }
 
-.EMULATE {
-    font-family: "Spectral", serif;
-    font-style: italic;
+.e { grid-area: e;}
+
+.m { grid-area: m;}
+
+.u { grid-area: u;}
+
+.l { grid-area: l; }
+
+.a { grid-area: a; }
+
+.t { grid-area: t; }
+
+.i { grid-area: i; }
+
+.n { grid-area: n; }
+
+.g { grid-area: g; }
+
+.--- { grid-area: ---; }
+
+.img{
+    display: block;
+    height: 10vh;
+    /*width: 90%;*/
+    margin-left: auto;
+    margin-right: auto;
 }
-
-
 
