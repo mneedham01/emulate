@@ -5,16 +5,28 @@ body {
 
 .container {
     height: 100vh;
+    position: relative;
+}
+
+.emulating {
+    height: fit-content;
     width: 100%;
     display: grid;
+    position: absolute;
+
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 25% 50% 25%;
+    grid-template-rows: 0 50% 0;
     gap: 0 10px;
     grid-auto-flow: row;
     grid-template-areas:
       ". . . . . . . . . . . . . ."
       ". . e m u l a t i n g --- . ."
-      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . .";
+
+    margin: 0;
+    top: 40%;
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
 }
 
 .e { grid-area: e;}

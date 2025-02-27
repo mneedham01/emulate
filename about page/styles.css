@@ -1,0 +1,43 @@
+header {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+
+    background-color: white;
+
+    top: 0;
+
+    /*background-color: white;*/
+}
+
+.EMULATE {
+    font-family: "Spectral", serif;
+    font-style: italic;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}
+
+body{
+    margin: 0;
+    background-color: blue;
+}
+
+.group-photo {
+    height: 50vh;
+    width: 75%;
+
+    margin: auto;
+
+    background-color: darkred;
+}
