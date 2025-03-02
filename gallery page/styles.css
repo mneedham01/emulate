@@ -8,7 +8,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-    background-color: black;
+    background-color: #0B0705;
     margin: 0;
     justify-content: center;
 }
@@ -23,11 +23,11 @@ a:hover{
 
 header {
     position: fixed;
-    z-index: 999;
+    z-index: 20;
     text-align: center;
 
     color: white;
-    background-color: black;
+    background-color: #0B0705;
     font-family: "Spectral", serif;
     font-style: italic;
     width: 100%
@@ -47,6 +47,8 @@ header {
     content: "";
     display: table;
     clear: both;
+
+    z-index: 0;
 }
 
 .col {
@@ -55,20 +57,21 @@ header {
     padding: 10px;
     margin: 0 auto;
     text-align: center;
+    z-index: 0;
 }
 
 .col img {
     margin: 20px 10px;
     width: 75%;
+    z-index: 0;
+
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
-img:hover{
+.col img:hover{
     cursor: zoom-in;
     -webkit-filter: grayscale(0%);
     filter: none;
-}
-img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
 }
 
 
@@ -88,10 +91,14 @@ img {
 
 /*random collage elements overlay*/
 .parent {
+    height: 4000px;
+    width: 100%;
+    top: 20%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(15, 1fr);
-    gap: 0 0;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:
         "A . Aa . a"
@@ -109,45 +116,75 @@ img {
         "M . Mm . m"
         "N . Nn . n"
         "O . Oo . o";
-    z-index: 10;
+
+    margin: 0;
 }
 
-.a { grid-area: a;}
-.b { grid-area: b;}
-.c { grid-area: c;}
-.d { grid-area: d;}
-.e { grid-area: e;}
-.f { grid-area: f;}
-.g { grid-area: g;}
-.h { grid-area: h;}
-.i { grid-area: i;}
-.j { grid-area: j;}
-.k { grid-area: k;}
-.l { grid-area: l;}
-.m { grid-area: m;}
-.n { grid-area: n;}
-.o { grid-area: o;}
+.a { grid-area: a;
+    z-index: 10;}
+.b { grid-area: b;
+    z-index: 10;}
+.c { grid-area: c;
+    z-index: 10;}
+.d { grid-area: d;
+    z-index: 10;}
+.e { grid-area: e;
+    z-index: 10;}
+.f { grid-area: f;
+    z-index: 10;}
+.g { grid-area: g;
+    z-index: 10;}
+.h { grid-area: h;
+    z-index: 10;}
+.i { grid-area: i;
+    z-index: 10;}
+.j { grid-area: j;
+    z-index: 10;}
+.k { grid-area: k;
+    z-index: 10;}
+.l { grid-area: l;
+    z-index: 10;}
+.m { grid-area: m;
+    z-index: 10;}
+.n { grid-area: n;
+    z-index: 10;}
+.o { grid-area: o;
+    z-index: 10;}
 
-.A { grid-area: A;}
-.B { grid-area: B;}
-.C { grid-area: C;}
-.D { grid-area: D;}
-.E { grid-area: E;}
-.F { grid-area: F;}
-.G { grid-area: G;}
-.H { grid-area: H;}
-.I { grid-area: I;}
-.J { grid-area: J;}
-.K { grid-area: K;}
-.L { grid-area: L;}
-.M { grid-area: M;}
-.N { grid-area: N;}
-.O { grid-area: O;}
+.A { grid-area: A;
+    z-index: 10;}
+.B { grid-area: B;
+    z-index: 10;}
+.C { grid-area: C;
+    z-index: 10;}
+.D { grid-area: D;
+    z-index: 10;}
+.E { grid-area: E;
+    z-index: 10;}
+.F { grid-area: F;
+    z-index: 10;}
+.G { grid-area: G;
+    z-index: 10;}
+.H { grid-area: H;
+    z-index: 10;}
+.I { grid-area: I;
+    z-index: 10;}
+.J { grid-area: J;
+    z-index: 10;}
+.K { grid-area: K;
+    z-index: 10;}
+.L { grid-area: L;
+    z-index: 10;}
+.M { grid-area: M;
+    z-index: 10;}
+.N { grid-area: N;
+    z-index: 10;}
+.O { grid-area: O;
+    z-index: 10;}
 
 .element {
     display: block;
-    height: 5vh;
-    /*width: 90%;*/
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }

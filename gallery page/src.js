@@ -16,36 +16,49 @@ function zoom(){
     document.getElementById('zoomed').style.display = "block";
 }
 
-randomElement();
-function randomElement(){
-    const min = 0;
-    const max = 40;
-    let currentImg = Math.floor(Math.random() * (max - min + 1)) + min;
+function random_rotate(id){
+    // chooses between -30 and 30 degrees
+    const min = -15;
+    const max = 15;
+    var degree = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+    document.getElementById(id).style.transform = "rotate("+ degree.toString() + "deg)";
+}
+
+const numMin = 2;
+const numMax = 10;
+let numElements = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
+
+for(let i = 0; i < numElements; i++){
+    randomElement();
+}
+function randomElement(){
+    const eMin = 0;
+    const eMax = 40;
+    let currentImg = Math.floor(Math.random() * (eMax - eMin + 1)) + eMin;
+
+    // let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+    let divs = ["c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+
     const divMin = 0;
-    const divMax = 26;
+    const divMax = 14;
     let curDiv = Math.floor(Math.random() * (divMax - divMin + 1)) + divMin;
 
     const heads = 0;
     const tails = 1;
     let coin = Math.floor(Math.random() * (tails - heads + 1)) + heads;
 
-    let location = "";
-
-    let img = document.createElement('element');
-    img.src = '../_archive/collageElements/' + currentImg + '.png';
+    let id = "";
 
     if(coin === 1){
-        location = divs[curDiv].toUpperCase() + "-";
+        id = divs[curDiv].toUpperCase() + "-";
     } else {
-        location = "-" + divs[curDiv];
+        id = "-" + divs[curDiv];
     }
-    console.log(location);
-    console.log(curDiv);
-    console.log(coin);
 
-    document.getElementById(location).appendChild(img);
+    let element = document.getElementById(id);
+    element.src = '../_archive/collageElements/' + currentImg + '.png';
+    random_rotate(id)
 }
 
 // window.addEventListener("load", randomElement);
