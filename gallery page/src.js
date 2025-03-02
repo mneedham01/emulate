@@ -37,8 +37,8 @@ function randomElement(){
     const eMax = 40;
     let currentImg = Math.floor(Math.random() * (eMax - eMin + 1)) + eMin;
 
-    let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
-    // let divs = ["c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+    // let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+    let divs = ["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
 
     const divMin = 0;
     const divMax = 14;
