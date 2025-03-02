@@ -12,9 +12,18 @@ for(let i=1; i < 26; i++){
     }
 }
 
-function zoom(){
-    document.getElementById('zoomed').style.display = "block";
-}
+// function zoom(){
+//     document.getElementById('zoomed').style.display = "block";
+// }
+
+// let im = document.querySelector('.img');
+//
+// let zoom = () => {
+//     document.getElementById('zoomed').style.display = "block";
+// }
+// im.forEach((item) => {
+//     item.addEventListener('click', zoom)
+// });
 
 function random_rotate(id){
     // chooses between -30 and 30 degrees
@@ -26,10 +35,10 @@ function random_rotate(id){
 }
 
 const numMin = 2;
-const numMax = 10;
+const numMax = 4;
 let numElements = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
 
-for(let i = 0; i < numElements; i++){
+for(let i = 0; i <= numElements; i++){
     randomElement();
 }
 function randomElement(){
@@ -37,11 +46,11 @@ function randomElement(){
     const eMax = 40;
     let currentImg = Math.floor(Math.random() * (eMax - eMin + 1)) + eMin;
 
-    // let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
-    let divs = ["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+    let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+    // let divs = ["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
 
     const divMin = 0;
-    const divMax = 14;
+    const divMax =6;
     let curDiv = Math.floor(Math.random() * (divMax - divMin + 1)) + divMin;
 
     const heads = 0;
