@@ -38,6 +38,8 @@ header {
     animation: scroll 500s linear infinite;
     top: 20%;
 
+    z-index: 0;
+
 }
 
 .row:after {
@@ -83,6 +85,72 @@ img {
 }
 
 
+
+/*random collage elements overlay*/
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 0 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "A . Aa . a"
+        "B . Bb . b"
+        "C . Cc . c"
+        "D . Dd . d"
+        "E . Ee . e"
+        "F . Ff . f"
+        "G . Gg . g"
+        "H . Hh . h"
+        "I . Ii . i"
+        "J . Jj . j"
+        "K . Kk . k"
+        "L . Ll . l"
+        "M . Mm . m"
+        "N . Nn . n"
+        "O . Oo . o";
+    z-index: 10;
+}
+
+.a { grid-area: a;}
+.b { grid-area: b;}
+.c { grid-area: c;}
+.d { grid-area: d;}
+.e { grid-area: e;}
+.f { grid-area: f;}
+.g { grid-area: g;}
+.h { grid-area: h;}
+.i { grid-area: i;}
+.j { grid-area: j;}
+.k { grid-area: k;}
+.l { grid-area: l;}
+.m { grid-area: m;}
+.n { grid-area: n;}
+.o { grid-area: o;}
+
+.A { grid-area: A;}
+.B { grid-area: B;}
+.C { grid-area: C;}
+.D { grid-area: D;}
+.E { grid-area: E;}
+.F { grid-area: F;}
+.G { grid-area: G;}
+.H { grid-area: H;}
+.I { grid-area: I;}
+.J { grid-area: J;}
+.K { grid-area: K;}
+.L { grid-area: L;}
+.M { grid-area: M;}
+.N { grid-area: N;}
+.O { grid-area: O;}
+
+.element {
+    display: block;
+    height: 5vh;
+    /*width: 90%;*/
+    margin-left: auto;
+    margin-right: auto;
+}
 @keyframes scroll {
     0% {
         transform: translateY(0);
