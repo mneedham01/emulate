@@ -6,6 +6,11 @@ function call_random_rotate() {
         random_rotate(ids[i]);
         random_letter(ids[i],letters[i] );
     }
+
+    let subtitles = ["click_image", "anywhere_image", "to_image", "enter_image"];
+    for(let i = 0; i < subtitles.length; i++){
+        random_rotate(subtitles[i]);
+    }
 }
 function random_rotate(id){
     // chooses between -30 and 30 degrees 
