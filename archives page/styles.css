@@ -1,77 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
-    position: relative;
-}
-
-.container {
-    height: fit-content;
-    width: fit-content;
-
-}
-
-.archive-element {
-    z-index:0;
-}
-
-.archive-viewer {
-    position: absolute;
-    display: none;
-    margin: auto;
-    z-index: 999;
-
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    width: 90%;
+    height: 100vh;
 
-    border: 2px solid black;
-    box-shadow: 5px 3px black;
-    background-color: white;
+    background-color: #e6e1d3;
 }
 
-img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+html::-webkit-scrollbar {
+    display: none;
 }
 
-
-img:hover {
-    -webkit-filter: grayscale(0%);
-    filter: none;
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
 }
 
-.button {
+a:hover{
+    color: blue;
+}
+
+.bookviewer{
+    width: 100%;
+    height: 80vh;
+
+    /*display: none;*/
+    display: flex;
     justify-content: center;
     align-items: center;
-    /*pointer-events: none*/
 
-    background-color: black;
-    color: white;
-    border: 0;
-    font-family: NT Bau Mono, monospace;
+    background-color: red;
 }
 
-#move{
-    display: none;
 
-    height: fit-content;
-    left: 50%;
-    top: 50%;
 
-    transform: translate(-50%, -50%);
+header {
     position: fixed;
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    color: black;
+    background-color: #e6e1d3;
+    font-family: "Spectral", serif;
+    font-style: italic;
 }
 
-.x-btn{
+
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 10px;
+
+    height: 100vh;
+    bottom: 0;
+
+    grid-auto-flow: row;
+    grid-template-areas:
+      "vol1-1 vol1-2 vol2-1 vol2-2 vol3-1 vol3-2 vol4-1 vol4-2 vol5-1 vol5-2 zine1";
+}
+
+.vol1-1 { grid-area: vol1-1; }
+.vol1-2 { grid-area: vol1-2; }
+.vol2-1 { grid-area: vol2-1; }
+.vol2-2 { grid-area: vol2-2; }
+.vol3-1 { grid-area: vol3-1; }
+.vol3-2 { grid-area: vol3-2; }
+.vol4-1 { grid-area: vol4-1; }
+.vol4-2 { grid-area: vol4-2; }
+.vol5-1 { grid-area: vol5-1; }
+.vol5-2 { grid-area: vol5-2; }
+.zine1 { grid-area: zine1; }
+
+.issue{
+    display: block;
+    bottom: 0;
+    height: 75vh;
+    width: 80%;
+    background-color: red;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/*FLIPBOOK*/
+/* Book */
+.book {
+    position: relative;
+    width: 30%;
+    height: 50vh;
+    transition: transform 0.5s;
+}
+
+.paper {
     position: absolute;
-    right: 0;
-    top:0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
 
-    width: 30px;
-    height: 30px;
-
-    border: 2px solid white;
 }
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid powderblue;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+img{
+    max-height: 500px;
+    max-width: 300px;
+}
+/*.container {*/
+/*    height: fit-content;*/
+/*    width: fit-content;*/
+
+/*}*/
+
+/*.archive-element {*/
+/*    z-index:0;*/
+/*}*/
+
+/*.archive-viewer {*/
+/*    position: absolute;*/
+/*    display: none;*/
+/*    margin: auto;*/
+/*    z-index: 999;*/
+
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 90vh;*/
+/*    width: 90%;*/
+
+/*    border: 2px solid black;*/
+/*    box-shadow: 5px 3px black;*/
+/*    background-color: white;*/
+/*}*/
+
+/*img {*/
+/*    -webkit-filter: grayscale(100%); !* Safari 6.0 - 9.0 *!*/
+/*    filter: grayscale(100%);*/
+/*}*/
+
+
+/*img:hover {*/
+/*    -webkit-filter: grayscale(0%);*/
+/*    filter: none;*/
+/*}*/
+
+/*.button {*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    !*pointer-events: none*!*/
+
+/*    background-color: black;*/
+/*    color: white;*/
+/*    border: 0;*/
+/*    font-family: NT Bau Mono, monospace;*/
+/*}*/
+
+/*#move{*/
+/*    display: none;*/
+
+/*    height: fit-content;*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+
+/*    transform: translate(-50%, -50%);*/
+/*    position: fixed;*/
+/*}*/
+
+/*.x-btn{*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    top:0;*/
+
+/*    width: 30px;*/
+/*    height: 30px;*/
+
+/*    border: 2px solid white;*/
+/*}*/
 
 /*.enter-hover {*/
 /*    position: fixed;*/

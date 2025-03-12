@@ -2,12 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darumadrop One">
 
+    <script src="src.js" defer></script>
+
+
     <title>Emulate Archives</title>
 </head>
+<header>
+    <h1 class="EMULATE"> <a href="../home%20page/home.html"> EMULATE </a></h1>
+
+</header>
 <body>
+<div class="bookviewer">
+    <button id="prev-btn">
+        <-
+    </button>
+
+
+    <!-- Book -->
+    <div id="book" class="book">
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <img src="../_archive/Fall_2024_Zine_pngs/1.png" alt="zine1"></img>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                    <img src="../_archive/Fall_2024_Zine_pngs/2.png" alt="zine1"></img>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">
+                    <img src="../_archive/Fall_2024_Zine_pngs/4.png" alt="zine1"></img>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">
+                    <img src="../_archive/Fall_2024_Zine_pngs/5.png" alt="zine1"></img>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                    <img src="../_archive/Fall_2024_Zine_pngs/6.png" alt="zine1"></img>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">
+                    <img src="../_archive/Fall_2024_Zine_pngs/7.png" alt="zine1"></img>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Next Button -->
+    <button id="next-btn">
+        ->
+    </button>
+</div>
+
+
+<!--<div class="parent">-->
+<!--    <div class="issue vol1-1"> </div>-->
+<!--    <div class="issue vol1-2"> </div>-->
+<!--    <div class="issue vol2-1"> </div>-->
+<!--    <div class="issue vol2-2"> </div>-->
+<!--    <div class="issue vol3-1"> </div>-->
+<!--    <div class="issue vol3-2"> </div>-->
+<!--    <div class="issue vol4-1"> </div>-->
+<!--    <div class="issue vol4-2"> </div>-->
+<!--    <div class="issue vol5-1"> </div>-->
+<!--    <div class="issue vol5-2"> </div>-->
+<!--    <div class="issue zine1"> </div>-->
+<!--</div>-->
 <!--<div class="row">-->
 <!--    <div class="column">-->
 
@@ -22,17 +100,17 @@
 
 <!--    </div>-->
 <!--</div>-->
-<div class="container">
-    <div class="archive-element" onmouseover="hover('move')" onmouseout="exit('move')">
-        <img id="zine1" class="greyscale" src="/_archive/Fall%202024%20Zine%20pngs/1.png" alt="Zine Cover" style="max-height:50vh;">
-    </div>
-    <button class="button" id="move" onclick="openViewer('viewer', 'zine1');">View Project</button>
-</div>
+<!--<div class="container">-->
+<!--    <div class="archive-element" onmouseover="hover('move')" onmouseout="exit('move')">-->
+<!--        <img id="zine1" class="greyscale" src="/_archive/Fall%202024%20Zine%20pngs/1.png" alt="Zine Cover" style="max-height:50vh;">-->
+<!--    </div>-->
+<!--    <button class="button" id="move" onclick="openViewer('viewer', 'zine1');">View Project</button>-->
+<!--</div>-->
 
-<div class="archive-viewer" id="viewer">
-    <button class="button x-btn" onclick="exit('viewer')">X</button>
+<!--<div class="archive-viewer" id="issue viewer">-->
+<!--    <button class="button x-btn" onclick="exit('viewer')">X</button>-->
 
-</div>
+<!--</div>-->
 
 </body>
 
