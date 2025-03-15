@@ -6,21 +6,19 @@ function getLetterIds() {
 }
 
 // this function opens the scissors
-function open() {
+function openScissors() {
     let top = document.getElementById("top");
     let bottom = document.getElementById("bottom");
     top.animate (
         {
-            transform: ["rotate(0deg)", "rotate(15deg)"]
+            transform: ["rotate(0deg)", "rotate(10deg)"]
         }, 1000,
     )
     bottom.animate (
         {
-            transform: ["rotate(0deg)", "rotate(-15deg)"]
+            transform: ["rotate(0deg)", "rotate(-10deg)"]
         }, 1000,
     )
-    top.style.transform = "rotate(15deg)";
-    bottom.style.transform = "rotate(-15deg)";
+    top.style.transform = "rotate(10deg)";
+    bottom.style.transform = "rotate(-10deg)";
 }
-
-window.addEventListener("load", open);
