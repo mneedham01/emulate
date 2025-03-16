@@ -14,25 +14,24 @@
 .pic2 { grid-area: 6 / 3 / 9 / 7; }
 .pic3 { grid-area: 2 / 10 / 4 / 13; }
 .pic4 { grid-area: 3 / 11 / 5 / 15; }
-.emulate { grid-area: 6 / 10 / 12 / 14; }
+.emulate { grid-area: 6 / 10 / 8 / 8; }
 
 .doodle{
-    width: 100%;
+    width: 10vh;
 }
 
 .emulate_img{
-    height: 5vh;
+    height: 20vh;
 }
 
-.scissor_img_top{
-    display: block;  
+.scissor_img_top{ 
     height: 20vh;
-    rotate: 0deg;
+    rotate: -0deg; 
 }
 
 
 .scissor_img_bottom{
     display: block;  
     height: 20vh;
-    rotate: 0deg;
+    rotate: -20deg;
 }
