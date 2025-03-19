@@ -36,6 +36,7 @@ a:hover{
     align-items: center;
 
     background-color: red;
+    /*opacity: 0.5;*/
 }
 
 
@@ -104,8 +105,8 @@ header {
 /* Book */
 .book {
     position: relative;
-    width: 30%;
-    height: 50vh;
+    width: 325px;
+    height: 500px;
     transition: transform 0.5s;
 }
 
@@ -197,7 +198,7 @@ i {
 
 img{
     max-height: 500px;
-    max-width: 300px;
+    max-width: 325px;
 }
 /*.container {*/
 /*    height: fit-content;*/
