@@ -9,7 +9,7 @@ function getLetterIds() {
 function turnScissors() {
     let top = document.getElementById("top");
     let bottom = document.getElementById("bottom");
-    if (opened == "closed") {
+    if (opened === "closed") {
         top.animate (
             {
                 transform: ["rotate(0deg)", "rotate(5deg)"]
@@ -47,7 +47,7 @@ function openScissors() {
     let bottom = document.getElementById("bottom");
     let menu = document.getElementById("menu");
     let expanded_menu = document.getElementById("expanded_menu");
-    if (opened == "closed") {
+    if (opened === "closed") {
         top.animate (
             {
                 transform: ["rotate(0deg)", "rotate(20deg)"]

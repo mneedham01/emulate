@@ -1,12 +1,18 @@
+body {
+    margin: 0;
+    background-image: url(../_archive/backgrounds/graphpaper.jpg);
+    background-size: cover;
+
+}
+
 .background {
     display: grid;
     height: 100vh;
-    background-image: url(../_archive/backgrounds/graphpaper.jpg);
-    background-size: cover;
+    /*background-image: url(../_archive/backgrounds/graphpaper.jpg);*/
+    /*background-size: cover;*/
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(15, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    gap: 0 0;
 }
 
 .scissors { grid-area: 2 / 1 / 5 / 5; }
@@ -41,4 +47,26 @@
 .expanded_menu_img {
     height: 30vh;
     visibility: hidden;
+}
+
+.bulletin-board {
+    position: absolute;
+    top: 90%;
+    height: fit-content;
+    /*justify-content: center;*/
+}
+
+.bulletin-board img{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    /*max-height: 80vh;*/
+}
+
+footer {
+    bottom: 0;
+    background-color: blue;
+    text-align: center;
+    padding: 5px;
+
 }

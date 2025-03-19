@@ -43,7 +43,7 @@ for(let i = 0; i <= numElements; i++){
 }
 function randomElement(){
     const eMin = 0;
-    const eMax = 40;
+    const eMax = 39;
     let currentImg = Math.floor(Math.random() * (eMax - eMin + 1)) + eMin;
 
     let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
