@@ -1,16 +1,37 @@
 //want to figure out a way to automatically read in how many eventPhotos there are in a directory
+// window.addEventListener("load", populate("yule"));
+// document.getElementById("halloween").addEventListener("click", populate("halloween"));
+// document.getElementById("yule").addEventListener("click", populate("yule"));
+// document.getElementById("craft-concert").addEventListener("click", populate("craft-concert"));
+// document.getElementById("april-fools").addEventListener("click", populate("april-fools"));
 
-for(let i=1; i < 26; i++){
-    let img = document.createElement('img');
-    img.id = "img" + i;
-    // document.getElementById("img" + i).addEventListener("click", zoom());
-    img.src = '../_archive/eventPhotos/' + i + '.JPG';
-    if(i < 26/2) {
-        document.getElementById("col1").appendChild(img);
-    } else {
-        document.getElementById("col2").appendChild(img);
+function populate(id){
+    document.getElementById(id).style.backgroundColor = "#27293D";
+    // location.reload();
+    for(let i=1; i < 26; i++){
+        let img = document.createElement('img');
+        img.id = "img" + i;
+        // document.getElementById("img" + i).addEventListener("click", zoom());
+        img.src = '../_archive/eventPhotos/' + id + '/' + i + '.JPG';
+        if(i < 26/2) {
+            document.getElementById("col1").appendChild(img);
+        } else {
+            document.getElementById("col2").appendChild(img);
+        }
     }
 }
+function refresh(){
+    let img;
+    for (let i = 1; i < 26; i++) {
+        img = document.getElementById("img" + i);
+        if (i < 26 / 2) {
+            document.getElementById("col1").removeChild(img);
+        } else {
+            document.getElementById("col2").removeChild(img);
+        }
+    }
+}
+
 
 // function zoom(){
 //     document.getElementById('zoomed').style.display = "block";
@@ -34,8 +55,8 @@ function random_rotate(id){
     document.getElementById(id).style.transform = "rotate("+ degree.toString() + "deg)";
 }
 
-const numMin = 2;
-const numMax = 4;
+const numMin = 1;
+const numMax = 3;
 let numElements = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
 
 for(let i = 0; i <= numElements; i++){
