@@ -26,21 +26,6 @@ a:hover{
     color: blue;
 }
 
-/*.bookviewer{*/
-/*    width: 100%;*/
-/*    height: 80vh;*/
-
-/*    !*display: none;*!*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-
-/*    background-color: red;*/
-/*    !*opacity: 0.5;*!*/
-/*}*/
-
-
-
 header {
     position: fixed;
     z-index: 999;
@@ -101,8 +86,25 @@ header {
     max-height: max-content;
 
     bottom: 0;
+    box-shadow: #27293D;
 }
 
+
+
+
+
+/*.bookviewer{*/
+/*    width: 100%;*/
+/*    height: 80vh;*/
+
+/*    !*display: none;*!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+
+/*    background-color: red;*/
+/*    !*opacity: 0.5;*!*/
+/*}*/
 
 /*!*FLIPBOOK*!*/
 /*!* Book *!*/
@@ -293,3 +295,23 @@ header {
 /*}*/
 
 
+.TOC{
+    display: block;
+    position: absolute;
+    top: 98vh;
+}
+.TOC ul{
+    list-style-type: none;
+}
+.TOC li{
+    font-size: xxx-large;
+    font-family: "Prata", "Spectral", serif;
+}
+.TOC img{
+    max-height: 1em;
+}
+.year{
+    font-size: xx-large;
+    font-family: "Karla", monospace;
+    vertical-align: top;
+}
