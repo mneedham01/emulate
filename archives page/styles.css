@@ -10,7 +10,9 @@ body {
     align-items: center;
     height: 100vh;
 
-    background-color: #e6e1d3;
+    /*background-color: #e6e1d3;*/
+    background-image: url("../_archive/backgrounds/fabric.jpg");
+    background-size: cover;
 }
 
 html::-webkit-scrollbar {
@@ -44,7 +46,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 0 10px;
+    gap: 0 5px;
 
     height: 100vh;
     top: 20vh;
@@ -71,7 +73,7 @@ header {
     display: flex;
     align-items: flex-end;
 
-    margin-top: 10vh;
+    margin-top: 20vh;
     height: 75vh;
     width: 80%;
     /*background-color: red;*/
@@ -296,7 +298,8 @@ header {
 
 
 .TOC{
-    display: block;
+    display: inline-flex;
+    align-items: flex-end;
     position: absolute;
     top: 98vh;
 }
@@ -309,6 +312,8 @@ header {
 }
 .TOC img{
     max-height: 1em;
+    margin: 0 auto;
+    bottom: 0;
 }
 .year{
     font-size: xx-large;
