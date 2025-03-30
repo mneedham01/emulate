@@ -70,10 +70,12 @@ body{
 
 .star{
     position: absolute;
-    top: 40vh;
-    left: 30vh;
+    top: 30vh;
+    left: 40vh;
 }
 
 .star_img{
-    width: 20vh;
+    width: 50vh;
+    visibility: hidden;
+    rotate: -20deg;
 }
