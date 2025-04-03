@@ -1,0 +1,79 @@
+body{
+    width: 100vh;
+    height: 100vh;
+
+    background-image: url(_archive/backgrounds/graphpaper.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.scissors{
+    width: 20vh;
+    /* This height causes the two scissor images to overlap */
+    height: 0vh;
+
+    background-color: aqua;
+
+    position: relative;
+    top: 5vh;
+    left: 0vh;
+}
+
+.scissor_img_top{
+    height: 20vh;
+    width: auto;
+    rotate: 15deg;
+}
+
+.scissor_img_bottom{
+    height: 20vh;
+    width: auto;
+    rotate: -15deg;
+}
+
+.menu{
+    width: 10vh;
+    height: 5vh;
+
+    position: relative; 
+    top: 11vh;
+    left: 42vh;
+}
+
+.menu_img{
+    width: 20vh;
+}
+
+.expanded_menu{
+    position: relative;
+    top: -5vh;
+    left: 42vh;
+    visibility: hidden;
+}
+
+.expanded_menu_img{
+    width: 38vh;
+}
+
+.emulate{
+    width: 10vh;
+    height: 20vh;
+
+    position: absolute;
+    top: 50vh;
+    left: 65vh;
+}
+
+.emulate_img{
+    height: 20vh;
+}
+
+.star{
+    position: absolute;
+    top: 40vh;
+    left: 30vh;
+}
+
+.star_img{
+    width: 20vh;
+}
