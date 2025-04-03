@@ -82,6 +82,10 @@ function goPrevPage() {
     }
 }
 
+function openViewer(){
+    document.getElementById("")
+}
+
 // const move = document.getElementById("move");
 //
 // function popup(iD){
