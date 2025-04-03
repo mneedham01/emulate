@@ -51,7 +51,7 @@ function goNextPage() {
                 closeBook(false);
                 break;
             default:
-                throw new Error("unkown state");
+                throw new Error("unknown state");
         }
         currentLocation++;
     }
@@ -119,11 +119,11 @@ function openViewer(){
 //     x.style.display = "none"
 // }
 //
-// function openViewer(iD, elmtID){
-//     var elmt = document.getElementById(elmtID)
-//     var x = document.getElementById(iD);
-//     x.style.display = "block"
-//
-// }
+function openViewer(iD, elmtID){
+    var elmt = document.getElementById(elmtID)
+    var x = document.getElementById(iD);
+    x.style.display = "flex"
+
+}
 
 
