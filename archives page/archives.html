@@ -11,7 +11,6 @@
 
     <script src="src.js" defer></script>
 
-
     <title>Emulate Archives</title>
 </head>
 <header>
@@ -24,7 +23,7 @@
         X
     </button>
     <button id="prev-btn">
-        <-
+        <img class="arrow prev" src="../_archive/library/arrow.png" alt="<<">
     </button>
 
 
@@ -73,23 +72,23 @@
 
     <!-- Next Button -->
     <button id="next-btn">
-        ->
+        <img class="arrow next" src="../_archive/library/arrow.png" alt="<<">
     </button>
 </div>
 
 
-<div class="parent">
-    <div class="issue vol1-1" id="1-1" onclick="openViewer('bookviewer', '1-1')"> </div>
-    <div class="issue vol1-2" id="1-2" onclick="openViewer('bookviewer', '1-2')"> </div>
-    <div class="issue vol2-1" id="2-1" onclick="openViewer('bookviewer', '2-1')"> </div>
-    <div class="issue vol2-2" id="2-2" onclick="openViewer('bookviewer', '2-2')"> </div>
-    <div class="issue vol3-1" id="3-1" onclick="openViewer('bookviewer', '3-1')"> </div>
-    <div class="issue vol3-2" id="3-2" onclick="openViewer('bookviewer', '3-2')"> </div>
-    <div class="issue vol4-1" id="4-1" onclick="openViewer('bookviewer', '4-1')"> </div>
-    <div class="issue vol4-2" id="4-2" onclick="openViewer('bookviewer', '4-2')"> <img src="../_archive/library/4.2.png" alt="4-2"></div>
-    <div class="issue vol5-1" id="5-1" onclick="openViewer('bookviewer', '5-1')"> <img src="../_archive/library/5.1.png" alt="5-1"> </div>
-    <div class="issue vol5-2" id="5-2" onclick="openViewer('bookviewer', '5-2')"> </div>
-    <div class="issue zine1" id="zine1" onclick="openViewer('bookviewer', 'zine1')"> </div>
+<div class="lib">
+    <div class="issue vol1-1" id="1-1" onclick="openViewer('bookviewer', '1-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    <div class="issue vol1-2" id="1-2" onclick="openViewer('bookviewer', '1-2')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    <div class="issue vol2-1" id="2-1" onclick="openViewer('bookviewer', '2-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    <div class="issue vol2-2" id="2-2" onclick="openViewer('bookviewer', '2-2')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    <div class="issue vol3-1" id="3-1" onclick="openViewer('bookviewer', '3-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    <div class="issue vol3-2" id="3-2" onclick="openViewer('bookviewer', '3-2')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    <div class="issue vol4-1" id="4-1" onclick="openViewer('bookviewer', '4-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    <div class="issue vol4-2" id="4-2" onclick="openViewer('bookviewer', '4-2')"> <img class="spine" src="../_archive/library/spines/4.2.png" alt="4-2"></div>
+    <div class="issue vol5-1" id="5-1" onclick="openViewer('bookviewer', '5-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"> </div>
+    <div class="issue vol5-2" id="5-2" onclick="openViewer('bookviewer', '5-2')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    <div class="issue zine1" id="zine1" onclick="openViewer('bookviewer', 'zine1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
 </div>
 
 <div class="TOC">

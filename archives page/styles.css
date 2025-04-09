@@ -13,6 +13,9 @@ body {
     /*background-color: #e6e1d3;*/
     background-image: url("../_archive/backgrounds/fabric.jpg");
     background-size: cover;
+
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
 }
 
 html::-webkit-scrollbar {
@@ -42,53 +45,63 @@ header {
 
 
 
-.parent {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0 5px;
+/*.lib {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+/*    grid-template-rows: 1fr;*/
+/*    gap: 0 5px;*/
 
-    height: 100vh;
-    top: 20vh;
-    bottom: 0;
+/*    height: 100vh;*/
+/*    top: 20vh;*/
+/*    bottom: 0;*/
 
-    grid-auto-flow: row;
-    grid-template-areas:
-      "vol1-1 vol1-2 vol2-1 vol2-2 vol3-1 vol3-2 vol4-1 vol4-2 vol5-1 vol5-2 zine1";
+/*    grid-auto-flow: row;*/
+/*    grid-template-areas:*/
+/*      "vol1-1 vol1-2 vol2-1 vol2-2 vol3-1 vol3-2 vol4-1 vol4-2 vol5-1 vol5-2 zine1";*/
+/*}*/
+
+/*.vol1-1 { grid-area: vol1-1; }*/
+/*.vol1-2 { grid-area: vol1-2; }*/
+/*.vol2-1 { grid-area: vol2-1; }*/
+/*.vol2-2 { grid-area: vol2-2; }*/
+/*.vol3-1 { grid-area: vol3-1; }*/
+/*.vol3-2 { grid-area: vol3-2; }*/
+/*.vol4-1 { grid-area: vol4-1; }*/
+/*.vol4-2 { grid-area: vol4-2; }*/
+/*.vol5-1 { grid-area: vol5-1; }*/
+/*.vol5-2 { grid-area: vol5-2; }*/
+/*.zine1 { grid-area: zine1; }*/
+
+.lib{
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    /*background-color: blue;*/
+    white-space: normal;
+    overflow: hidden;
+    width: 90%;
 }
 
-.vol1-1 { grid-area: vol1-1; }
-.vol1-2 { grid-area: vol1-2; }
-.vol2-1 { grid-area: vol2-1; }
-.vol2-2 { grid-area: vol2-2; }
-.vol3-1 { grid-area: vol3-1; }
-.vol3-2 { grid-area: vol3-2; }
-.vol4-1 { grid-area: vol4-1; }
-.vol4-2 { grid-area: vol4-2; }
-.vol5-1 { grid-area: vol5-1; }
-.vol5-2 { grid-area: vol5-2; }
-.zine1 { grid-area: zine1; }
-
 .issue{
+    float: left;
     display: flex;
     align-items: flex-end;
 
-    margin-top: 20vh;
-    height: 75vh;
-    width: 80%;
-    /*background-color: red;*/
+    height: 800px;
+    width: 100px;
 
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-.issue img{
+.spine{
     margin: 0 auto;
-    max-width: 100%;
-    max-height: max-content;
+    max-width: 500px;
+    box-shadow: -10px 10px #27293D;
+
+    /*max-width: 100%;*/
+    max-height: 75vh;
 
     bottom: 0;
-    box-shadow: #27293D;
 }
 
 
@@ -213,7 +226,6 @@ img{
 
 
 
-
 /*.container {*/
 /*    height: fit-content;*/
 /*    width: fit-content;*/
@@ -321,4 +333,13 @@ img{
     font-size: xx-large;
     font-family: "Karla", monospace;
     vertical-align: top;
+}
+
+
+.arrow {
+    height: 100px;
+}
+
+.prev {
+    transform: scaleX(-1);
 }
