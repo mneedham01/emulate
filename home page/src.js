@@ -85,3 +85,12 @@ function openScissors() {
 function sayhi() {
     window.alert("hello");
 }
+
+
+
+randomize('doodle')
+const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
+function randomize(ID){
+    ID.style.left = getRandom(0, 100)+'%';
+    ID.style.top = getRandom(0, 100)+'vh';
+}

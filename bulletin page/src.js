@@ -44,7 +44,7 @@ function exit(id){
 //         elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
 //         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
 //     }
-
+//
 //     function closeDragElement() {
 //         // stop moving when mouse button is released:
 //         document.onmouseup = null;
@@ -61,8 +61,7 @@ window.addEventListener("load", function randomize(){
     }
 });
 
-window.addEventListener("load", randomize(document.getElementById("welcome")));
-window.addEventListener("load", randomize(document.getElementById("zine")));
+window.addEventListener("load", randomize(document.getElementById("doodle")));
 const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
 function randomize(ID){
     ID.style.left = getRandom(0, 300 - 200)+'px';
