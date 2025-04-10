@@ -2,6 +2,7 @@
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
 const book = document.querySelector("#book");
+const menu = document.querySelector("#menu");
 
 // const paper1 = document.querySelector("#p1");
 // const paper2 = document.querySelector("#p2");
@@ -15,6 +16,7 @@ nextBtn.addEventListener("click", goNextPage);
 let currentLocation = 0;
 let tPages = 2;
 let maxLocation = tPages + 1;
+let clicked = 0;
 
 function createBook(issue, numPg){
     let pg = 1;
@@ -160,12 +162,22 @@ function goPrevPage(){
 function exit(iD){
     location.reload()
 }
+function openMenu(){
+    if(clicked === 0){
+        menu.style.display = "block";
+        clicked++;
+    } else if(clicked === 1){
+        menu.style.display = "none";
+        clicked--;
+    }
+}
 
 function openViewer(iD, elmt){
     let x = document.getElementById(iD);
     x.style.display = "flex"
-    createBook('zine1', 20)
+    createBook(elmt, 20)
 }
+
 
 
 

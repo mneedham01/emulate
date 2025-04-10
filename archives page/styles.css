@@ -5,10 +5,10 @@
 }
 
 body {
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 
     /*background-color: #e6e1d3;*/
     background-image: url("../_archive/backgrounds/fabric.jpg");
@@ -17,6 +17,7 @@ body {
     /*margin-left: 5%;*/
     /*margin-right: 5%;*/
 }
+
 
 html::-webkit-scrollbar {
     display: none;
@@ -33,17 +34,48 @@ a:hover{
 
 header {
     position: fixed;
-    /*display: block;*/
-
-    z-index: 999;
+    /*display: inline-flex;*/
+    z-index: 1;
     text-align: center;
-    width: 100%;
-    top: 0;
+
     color: black;
-    background-color: red;
-    /*background-color: #e6e1d3;*/
+    top:0;
+
     font-family: "Spectral", serif;
     font-style: italic;
+    width: 100%;
+
+    /*padding-bottom: .5em;*/
+    padding: 1em;
+}
+/*.EMULATE {*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+
+/*    background-color: red;*/
+/*}*/
+
+.scissors{
+    position: absolute;
+    height: 40px;
+    /*max-width: 50px;*/
+    left: 25px;
+    top: 25px;
+
+    transform: rotate(210deg);
+
+}
+.menu {
+    display: none;
+}
+.menu img{
+    /*display: block;*/
+    position: absolute;
+    height: 300px;
+    /*background-color: white;*/
+    transform: rotate(30deg);
+    left: 50px;
+    top: -10px;
 }
 
 
@@ -82,10 +114,14 @@ header {
 
 
 .bookviewer{
-    position: absolute;
-    width: 90%;
-    height: 90vh;
-    z-index: 1;
+    position: fixed;
+    width: 95%;
+    height: 95vh;
+    z-index: 10;
+
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
 
     /*display: none;*/
     display: none;
@@ -95,6 +131,11 @@ header {
     backdrop-filter: blur(6px);
     border-style: solid;
     /*opacity: 0.5;*/
+}
+.x-btn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
 /*FLIPBOOK*/
@@ -292,7 +333,7 @@ i {
     justify-content: center;
 
 
-    top: 100px;
+    top: 50px;
     margin: 0 auto;
 
     height: fit-content;
@@ -352,17 +393,19 @@ i {
     min-width: 100px;
 
     width: 100%;
-    /*max-height: 100%;*/
+    /*max-height: 700px;*/
 
     bottom: 0;
 }
-
 
 
 .TOC{
     display: inline-flex;
     align-items: flex-end;
     position: relative;
+
+    left: 15%;
+    top: 10vh;
 
 }
 .TOC ul{
@@ -390,4 +433,12 @@ i {
 
 .prev {
     transform: scaleX(-1);
+}
+
+
+footer {
+    position: relative;
+    height: 100px;
+    /*background-color: red;*/
+
 }
