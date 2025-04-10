@@ -29,7 +29,7 @@ function refresh(){
 // function zoom(){
 //     document.getElementById('zoomed').style.display = "block";
 // }
-
+//
 // let im = document.querySelector('.img');
 //
 // let zoom = () => {

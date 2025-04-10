@@ -171,15 +171,15 @@ function openViewer(iD, elmt){
 
 
 
-let spines = Object.values(document.getElementsByClassName("spine"));
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-spines.map(function (s, i) {
-    let randomHeight = getRandomInt(500, 800);
-    s.style.height = `${randomHeight}px`;
-    // s.style.top = `${280 - randomHeight}px`;
-});
+// let spines = Object.values(document.getElementsByClassName("spine"));
+// function getRandomInt(min, max) {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+//
+// spines.map(function (s, i) {
+//     let randomHeight = getRandomInt(800,1500);
+//     s.style.height = '${randomHeight}px';
+//     // s.style.top = `${800 - randomHeight}px`;
+// });
