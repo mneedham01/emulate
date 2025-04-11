@@ -1,10 +1,3 @@
-//want to figure out a way to automatically read in how many eventPhotos there are in a directory
-// window.addEventListener("load", populate("yule"));
-// document.getElementById("halloween").addEventListener("click", populate("halloween"));
-// document.getElementById("yule").addEventListener("click", populate("yule"));
-// document.getElementById("craft-concert").addEventListener("click", populate("craft-concert"));
-// document.getElementById("april-fools").addEventListener("click", populate("april-fools"));
-
 function populate(id){
     document.getElementById(id).style.backgroundColor = "#27293D";
     // location.reload();
@@ -36,7 +29,7 @@ function refresh(){
 // function zoom(){
 //     document.getElementById('zoomed').style.display = "block";
 // }
-
+//
 // let im = document.querySelector('.img');
 //
 // let zoom = () => {

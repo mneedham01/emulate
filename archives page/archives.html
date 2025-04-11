@@ -11,32 +11,39 @@
 
     <script src="src.js" defer></script>
 
-
     <title>Emulate Archives</title>
 </head>
 <header>
     <h1 class="EMULATE"> <a href="../home%20page/home.html"> EMULATE </a></h1>
-
+    <button onclick="openMenu()">
+        <img class="scissors" src="../_archive/library/TOC%20icons/scissors.png" alt="menu button">
+    </button>
+    <div id="menu" class="menu">
+        <img  src="../_archive/menu/full_menu.png" alt="menu">
+    </div>
 </header>
 <body>
-<!--<div class="bookviewer">-->
-<!--    <button id="prev-btn">-->
-<!--        <- -->
-<!--    </button>-->
+<div class="bookviewer" id="bookviewer">
+    <button id="exit" onclick="exit('bookviewer')">
+        X
+    </button>
+    <button id="prev-btn">
+        <img class="arrow prev" src="../_archive/library/arrow.png" alt="<<">
+    </button>
 
 
-<!--    &lt;!&ndash; Book &ndash;&gt;-->
-<!--    <div id="book" class="book">-->
+    <!-- Book -->
+    <div id="book" class="book">
 <!--        &lt;!&ndash; Paper 1 &ndash;&gt;-->
 <!--        <div id="p1" class="paper">-->
 <!--            <div class="front">-->
-<!--                <div id="f1" class="front-content">-->
-<!--                    <img src="../_archive/fall2024ZinePages/1.png" alt="zine1"></img>-->
+<!--                <div id="f1" class="front-content" >-->
+<!--                    <img src="../_archive/magazines/zine1/1.png" alt="zine1"></img>-->
 <!--                </div>-->
 <!--            </div>-->
 <!--            <div class="back">-->
-<!--                <div id="b1" class="back-content">-->
-<!--                    <img src="../_archive/fall2024ZinePages/2.png" alt="zine1"></img>-->
+<!--                <div id="b1" class="back-content" >-->
+<!--                    <img src="../_archive/magazines/zine1/2.png" alt="zine1"></img>-->
 <!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
@@ -44,12 +51,12 @@
 <!--        <div id="p2" class="paper">-->
 <!--            <div class="front">-->
 <!--                <div id="f2" class="front-content">-->
-<!--                    <img src="../_archive/fall2024ZinePages/table%20of%20contents%20(maia).png" alt="zine1"></img>-->
+<!--                    <img src="../_archive/magazines/zine1/table%20of%20contents%20(maia).png" alt="zine1"></img>-->
 <!--                </div>-->
 <!--            </div>-->
 <!--            <div class="back">-->
 <!--                <div id="b2" class="back-content">-->
-<!--                    <img src="../_archive/fall2024ZinePages/4.png" alt="zine1"></img>-->
+<!--                    <img src="../_archive/magazines/zine1/4.png" alt="zine1"></img>-->
 <!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
@@ -66,55 +73,52 @@
 <!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
-<!--    </div>-->
+    </div>
 
-<!--    &lt;!&ndash; Next Button &ndash;&gt;-->
-<!--    <button id="next-btn">-->
-<!--        ->-->
-<!--    </button>-->
-<!--</div>-->
-
-
-<div class="parent">
-    <div class="issue vol1-1"> </div>
-    <div class="issue vol1-2"> </div>
-    <div class="issue vol2-1"> </div>
-    <div class="issue vol2-2"> </div>
-    <div class="issue vol3-1"> </div>
-    <div class="issue vol3-2"> </div>
-    <div class="issue vol4-1"> </div>
-    <div class="issue vol4-2"> <img src="../_archive/library/4.2.png" alt="4-2"></div>
-    <div class="issue vol5-1"> <img src="../_archive/library/5.1.png" alt="5-1"> </div>
-    <div class="issue vol5-2"> </div>
-    <div class="issue zine1"> </div>
+    <!-- Next Button -->
+    <button id="next-btn">
+        <img class="arrow next" src="../_archive/library/arrow.png" alt="<<">
+    </button>
 </div>
 
-<div class="TOC">
-    <ul>
-        <li>Adolescence</li>
-        <li>Wilderness</li>
-        <li>Intimacy</li>
-        <li>Weekend</li>
-        <li>Rites and Rituals</li>
-        <li>Flights</li>
-        <li>Redefining Love</li>
-        <li>Metamorphosis</li>
-        <li>Confessions and Recollections</li>
-        <li>Fall 2024 Zine <img src="../_archive/fall2024ZinePages/1.png" alt="Fall2024_ZineCover"> <span class="year">2024</span></li>
-        <li>Visionaries</li>
-    </ul>
+<div class="content">
+    <div class="lib">
+        <div class="issue vol1-1" id="1-1" onclick="openViewer('bookviewer', '1-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+        <div class="issue vol1-2" id="1-2" onclick="openViewer('bookviewer', '1-2')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+        <div class="issue vol2-1" id="2-1" onclick="openViewer('bookviewer', '2-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+        <div class="issue vol2-2" id="2-2" onclick="openViewer('bookviewer', '2-2')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+        <div class="issue vol3-1" id="3-1" onclick="openViewer('bookviewer', '3-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+        <div class="issue vol3-2" id="3-2" onclick="openViewer('bookviewer', '3-2')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+        <div class="issue vol4-1" id="4-1" onclick="openViewer('bookviewer', '4-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+        <div class="issue vol4-2" id="4-2" onclick="openViewer('bookviewer', '4-2')"> <img class="spine" src="../_archive/library/spines/4.2.png" alt="4-2"></div>
+        <div class="issue vol5-1" id="5-1" onclick="openViewer('bookviewer', '5-1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"> </div>
+        <div class="issue vol5-2" id="5-2" onclick="openViewer('bookviewer', '5-2')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+        <div class="issue zine1" id="zine1" onclick="openViewer('bookviewer', 'zine1')"> <img class="spine" src="../_archive/library/spines/5.1.png" alt="5-1"></div>
+    </div>
+
+    <div class="spacer">
+
+    </div>
+
+    <div class="TOC">
+        <ul>
+            <li>Adolescence  <img src="../_archive/library/TOC%20icons/toy%20car.png" alt="adolescence"> <span class="year">2019</span></li>
+            <li>Wilderness <span class="year">2020</span></li>
+            <li>Intimacy <span class="year">2021</span></li>
+            <li>Weekend <span class="year">2021</span></li>
+            <li>Rites and Rituals <span class="year">2022</span></li>
+            <li>Flights <span class="year">2022</span></li>
+            <li>Redefining Love <span class="year">2023</span></li>
+            <li>Metamorphosis <span class="year">2023</span></li>
+            <li>Confessions and Recollections <span class="year">2024</span></li>
+            <li>Fall 2024 Zine <span class="year">2024</span></li>
+            <li>Visionaries  <img src="../_archive/library/TOC%20icons/eye.png" alt="vision"> <span class="year">2025</span></li>
+        </ul>
+    </div>
+    <footer>
+
+    </footer>
 </div>
-<!--<div class="container">-->
-<!--    <div class="archive-element" onmouseover="hover('move')" onmouseout="exit('move')">-->
-<!--        <img id="zine1" class="greyscale" src="/_archive/Fall%202024%20Zine%20pngs/1.png" alt="Zine Cover" style="max-height:50vh;">-->
-<!--    </div>-->
-<!--    <button class="button" id="move" onclick="openViewer('viewer', 'zine1');">View Project</button>-->
-<!--</div>-->
-
-<!--<div class="archive-viewer" id="issue viewer">-->
-<!--    <button class="button x-btn" onclick="exit('viewer')">X</button>-->
-
-<!--</div>-->
 
 </body>
 

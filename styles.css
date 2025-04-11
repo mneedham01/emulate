@@ -52,7 +52,14 @@ body{
 }
 
 .expanded_menu_img{
+    position: absolute;
     width: 38vh;
+}
+.svg{
+    position: absolute;
+    top: 0vh;
+    transform: scale(0.1);
+    visibility: visible;
 }
 
 .emulate{
@@ -61,7 +68,7 @@ body{
 
     position: absolute;
     top: 50vh;
-    left: 65vh;
+    left: 70vh;
 }
 
 .emulate_img{
@@ -70,10 +77,41 @@ body{
 
 .star{
     position: absolute;
-    top: 40vh;
-    left: 30vh;
+    top: 43vh;
+    left: 60vh;
 }
 
 .star_img{
-    width: 20vh;
+    width: 10vh;
+    visibility: visible;
+    rotate: 10deg;
 }
+
+.star2{
+    position: absolute;
+    top: 65vh;
+    left: 120vh;
+}
+
+.star2_img{
+    width: 10vh;
+    visibility: visible;
+    rotate: -20deg;
+}
+
+.new_work{
+    position: absolute;
+    top: 90vh;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 2fr) 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+.div1 { grid-area: 1 / 2 / 2 / 3; }
+.div2 { grid-area: 1 / 3 / 2 / 4;}
+.div3 { grid-area: 2 / 2 / 3 / 3; }
+.div4 { grid-area: 2 / 3 / 3 / 4; }
+.div5 { grid-area: 3 / 2 / 4 / 3; }
+.div6 { grid-area: 3 / 3 / 4 / 4; }
