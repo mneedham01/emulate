@@ -55,11 +55,12 @@ body{
     position: absolute;
     width: 38vh;
 }
+
 .svg{
-    position: absolute;
-    top: 0vh;
-    transform: scale(0.1);
-    visibility: visible;
+    position: relative;
+    top: -5vh;
+    left:42vh;
+    width: 38vh;
 }
 
 .emulate{
@@ -106,7 +107,7 @@ body{
     grid-template-columns: 1fr repeat(2, 2fr) 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 30px;
-    grid-row-gap: 10px;
+    grid-row-gap: 5px;
 }
 
 .div1 { grid-area: 1 / 2 / 2 / 3; }
