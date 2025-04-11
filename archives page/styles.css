@@ -367,24 +367,28 @@ i {
 
 .issue{
     flex: 1 0 100px;
+    display: inline;
     /*display: flex;*/
     /*float: left;*/
     /*align-items: flex-end;*/
     z-index: 0;
 
-    max-width: 150px;
-    min-width: 100px;
+    max-width: 160px;
+    min-width: 110px;
     height: fit-content;
     padding-top: 50px;
+
+    /*background-color: red;*/
 
     /*margin: 0 auto;*/
 }
 
 .spine{
+    display: inline;
+
     margin: 0 auto;
     flex: 1 1 auto;
     z-index: 0;
-
 
     /*max-width: fit-content;*/
     /*box-shadow: -10px -10px #27293D;*/
@@ -398,6 +402,13 @@ i {
     bottom: 0;
 }
 
+.cover{
+    position: absolute;
+    display: inline;
+
+    height: inherit;
+    transform: rotate3d(0, 1, 0, 80deg);
+}
 
 .TOC{
     display: inline-flex;
