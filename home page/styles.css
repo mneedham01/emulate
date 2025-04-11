@@ -1,4 +1,5 @@
 body {
+    display: block;
     margin: 0;
     background-image: url(../_archive/backgrounds/graphpaper.jpg);
     background-size: cover;
@@ -20,47 +21,38 @@ body {
 .expanded_menu { grid-area: 2 / 5 / 4 / 5; }
 .emulate { grid-area: 9 / 8 / 11 / 14; }
 
-.doodle{
-    width: 80vh;
-}
-
 .emulate_img{
+    z-index: 10;
     height: 15vh;
 }
 
-.scissor_img_top{ 
+.scissor_img_top{
+    z-index: 10;
+
     height: 20vh;
     rotate: 0deg; 
 }
 
 
 .scissor_img_bottom{
+    z-index: 10;
+
     display: block;  
     height: 20vh;
     rotate: 0deg;
 }
 
 .menu_img {
+    z-index: 10;
+
     height: 8vh;
 }
 
 .expanded_menu_img {
+    z-index: 10;
+
     height: 30vh;
     visibility: hidden;
-}
-
-.bulletin-board {
-    position: absolute;
-    top: 90%;
-    height: fit-content;
-    /*justify-content: center;*/
-}
-
-.bulletin-board img{
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    /*max-height: 80vh;*/
 }
 
 footer {
@@ -70,3 +62,12 @@ footer {
     padding: 5px;
 
 }
+
+
+
+
+
+
+
+
+
