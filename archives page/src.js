@@ -178,6 +178,24 @@ function openViewer(iD, elmt){
     createBook(elmt, 20)
 }
 
+function previewOn(Spine, Cover){
+    let spine = document.getElementById(Spine);
+    let cover = document.getElementById(Cover)
+
+    spine.style.transform = "rotate3d(1, 2, 0, 30deg) translateX(-30px) translateY(30px)"
+    cover.style.transform = "rotate3d(1, 2, 0, -70deg) translateX(-30px) translateY(30px)"
+    // x.style.zIndex = "1";
+
+}
+function previewOff(Spine, Cover){
+    let spine = document.getElementById(Spine);
+    let cover = document.getElementById(Cover);
+
+    spine.style.transform = "rotate(0deg)"
+    cover.style.transform = "rotate3d(0, 1, 0, 80deg)"
+
+
+}
 
 
 
