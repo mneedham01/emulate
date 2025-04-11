@@ -44,7 +44,7 @@ function exit(id){
 //         elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
 //         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
 //     }
-
+//
 //     function closeDragElement() {
 //         // stop moving when mouse button is released:
 //         document.onmouseup = null;
@@ -61,10 +61,56 @@ window.addEventListener("load", function randomize(){
     }
 });
 
-window.addEventListener("load", randomize(document.getElementById("welcome")));
-window.addEventListener("load", randomize(document.getElementById("zine")));
+window.addEventListener("load", randomize(document.getElementById("doodle")));
 const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
 function randomize(ID){
     ID.style.left = getRandom(0, 300 - 200)+'px';
     ID.style.top = getRandom(0, 300 - 200)+'px';
+}
+
+
+function random_rotate(id){
+    // chooses between -30 and 30 degrees
+    const min = -15;
+    const max = 15;
+    var degree = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    document.getElementById(id).style.transform = "rotate("+ degree.toString() + "deg)";
+}
+
+const numMin = 2;
+const numMax = 4;
+let numElements = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
+
+for(let i = 0; i <= numElements; i++){
+    randomElement();
+}
+function randomElement(){
+    const eMin = 0;
+    const eMax = 40;
+    let currentImg = Math.floor(Math.random() * (eMax - eMin + 1)) + eMin;
+
+    let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+    // let divs = ["b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];
+
+    const divMin = 0;
+    const divMax =6;
+    let curDiv = Math.floor(Math.random() * (divMax - divMin + 1)) + divMin;
+
+    const heads = 0;
+    const tails = 1;
+    let coin = Math.floor(Math.random() * (tails - heads + 1)) + heads;
+
+    let id = "";
+
+    if(coin === 1){
+        id = divs[curDiv].toUpperCase() + "-";
+    } else {
+        id = "-" + divs[curDiv];
+    }
+
+    let element = document.getElementById(id);
+    let image = '../_archive/collageElements/' + currentImg + '.png';
+    element.src = image;
+    random_rotate(id)
 }

@@ -1,21 +1,35 @@
-//want to figure out a way to automatically read in how many eventPhotos there are in a directory
-
-for(let i=1; i < 26; i++){
-    let img = document.createElement('img');
-    img.id = "img" + i;
-    // document.getElementById("img" + i).addEventListener("click", zoom());
-    img.src = '../_archive/eventPhotos/' + i + '.JPG';
-    if(i < 26/2) {
-        document.getElementById("col1").appendChild(img);
-    } else {
-        document.getElementById("col2").appendChild(img);
+function populate(id){
+    document.getElementById(id).style.backgroundColor = "#27293D";
+    // location.reload();
+    for(let i=1; i < 26; i++){
+        let img = document.createElement('img');
+        img.id = "img" + i;
+        // document.getElementById("img" + i).addEventListener("click", zoom());
+        img.src = '../_archive/eventPhotos/' + id + '/' + i + '.JPG';
+        if(i < 26/2) {
+            document.getElementById("col1").appendChild(img);
+        } else {
+            document.getElementById("col2").appendChild(img);
+        }
     }
 }
+function refresh(){
+    let img;
+    for (let i = 1; i < 26; i++) {
+        img = document.getElementById("img" + i);
+        if (i < 26 / 2) {
+            document.getElementById("col1").removeChild(img);
+        } else {
+            document.getElementById("col2").removeChild(img);
+        }
+    }
+}
+
 
 // function zoom(){
 //     document.getElementById('zoomed').style.display = "block";
 // }
-
+//
 // let im = document.querySelector('.img');
 //
 // let zoom = () => {
@@ -34,8 +48,8 @@ function random_rotate(id){
     document.getElementById(id).style.transform = "rotate("+ degree.toString() + "deg)";
 }
 
-const numMin = 2;
-const numMax = 4;
+const numMin = 1;
+const numMax = 3;
 let numElements = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
 
 for(let i = 0; i <= numElements; i++){
@@ -43,7 +57,7 @@ for(let i = 0; i <= numElements; i++){
 }
 function randomElement(){
     const eMin = 0;
-    const eMax = 40;
+    const eMax = 39;
     let currentImg = Math.floor(Math.random() * (eMax - eMin + 1)) + eMin;
 
     let divs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o"];

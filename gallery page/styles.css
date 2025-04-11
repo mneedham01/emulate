@@ -8,7 +8,9 @@ html::-webkit-scrollbar {
 }
 
 body {
-    background-color: #0B0705;
+    background-image: url("../_archive/backgrounds/blueFabric.jpg");
+    background-attachment: fixed;
+    /*background-size: cover;    */
     margin: 0;
     justify-content: center;
     overflow-x: hidden;
@@ -28,10 +30,41 @@ header {
     text-align: center;
 
     color: white;
-    background-color: #0B0705;
+    background-image: url("../_archive/backgrounds/blueFabric.jpg");
+    /*background-size: cover;*/
     font-family: "Spectral", serif;
     font-style: italic;
-    width: 100%
+    width: 100%;
+
+    padding-bottom: .5em;
+}
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 1em;
+
+    display: inline;
+}
+.navigation li{
+    border: none;
+    background: none;
+    display: inline;
+    color: white;
+
+}
+.navigation button{
+    font-family: 'Spectral', 'Courier New', monospace;
+    border: none;
+    background: none;
+
+    color: white;
+    padding-left: 2em;
+    padding-right: 2em;
+
+}
+
+.active{
+    background-color: #27293D;
 }
 
 .row{

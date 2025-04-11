@@ -5,32 +5,40 @@
   <title>Home-Page</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special Elite">
 </head>
-<body class="home-page">
-  <div class = "header">
-    <div class = "emulate">emulate magazine</div>
-  </div>
-  <div class = "main-box">
-    <div class="left-margin"></div>
-    <div class="right-margin"></div>
-    <div class="artwork">
-      <img class= "img" src="../_archive/Fall 2024 Zine pngs/15.png" , alt="Artwork">
-      "My Thoughts on Perspective" by Ramona Sapru
+<body>
+<div class = "background">
+    <!-- Scissors-->
+    <div class="scissors" id = "top" onclick="openScissors()">
+        <img src="../_archive/scissors/scissorsTop.png" class = "scissor_img_top"></img>
     </div>
-    <div class="apple1"> 
-      <button class="button" onclick="location.href='../about page/about.html'">
-        <img class= "img" src="../_archive/lapple3.png" , alt="About">
-      </button>
+    <div class="scissors" id = "bottom" onclick="openScissors()">
+        <img src="../_archive/scissors/scissorsBottom.png" class = "scissor_img_bottom"></img>
     </div>
-    <div class="apple2"> 
-      <button class="button" onclick = "location.href='../gallery page/gallery.html'">
-        <img class= "img" src="../_archive/lapple1.png" , alt="Archive">
-      </button>
+
+    <!-- Menu -->
+    <div class = "menu" >
+        <img src = "../_archive/menu/menu.png" class = "menu_img" id = "menu"></img>
     </div>
-    <div class="apple3"> 
-      <button class="button" onclick = "location.href='../bulletin page/bulletin-board.html'">
-        <img class= "img" src="../_archive/lapple2.png" , alt="Bulletin Board">
-      </button>
+
+    <!-- Expanded Menu -->
+    <div class = "expanded_menu">
+        <img src = "../_archive/menu/full_menu.png" class = "expanded_menu_img" id = "expanded_menu"></img>
     </div>
-  </div>
+
+    <!-- Emulate -->
+    <div class = "emulate">
+        <img src = "../_archive/emulate/ripped_paper_no_background.png" class = "emulate_img"></img>
+    </div>
+
+</div>
+
+
+
+<footer>
+    <p>emulate magazine</p>
+</footer>
+
 </body>
+<script src="src.js"> </script> 

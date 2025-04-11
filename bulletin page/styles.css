@@ -176,3 +176,77 @@ a:hover{
 
     /*background-color: blue;*/
 }
+
+
+
+/*random collage elements overlay*/
+.parent {
+    height: 100vh;
+    width: 100%;
+    top: 20%;
+    display: grid;
+    /*position: relative;*/
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "A . Aa . a"
+        "B . Bb . b"
+        "C . Cc . c"
+        "D . Dd . d"
+        "E . Ee . e";
+    /*"F . Ff . f"*/
+    /*"G . Gg . g"*/
+    /*"H . Hh . h"*/
+    /*"I . Ii . i"*/
+    /*"J . Jj . j"*/
+    /*"K . Kk . k"*/
+    /*"L . Ll . l"*/
+    /*"M . Mm . m"*/
+    /*"N . Nn . n"*/
+    /*"O . Oo . o";*/
+
+    margin: 0;
+}
+
+.a { grid-area: a;
+    z-index: 999;}
+.b { grid-area: b;
+    z-index: 999;}
+.c { grid-area: c;
+    z-index: 999;}
+.d { grid-area: d;
+    z-index: 999;}
+.e { grid-area: e;
+    z-index: 999;}
+
+
+
+.A { grid-area: A;
+    z-index: 999;}
+.B { grid-area: B;
+    z-index: 999;}
+.C { grid-area: C;
+    z-index: 999;}
+.D { grid-area: D;
+    z-index: 999;}
+.E { grid-area: E;
+    z-index: 999;}
+
+.element {
+    display: block;
+    position: fixed;
+    max-width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+
+    -webkit-filter: drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px -2px 0 white);
+    filter:drop-shadow(2px 2px 0 white)
+    drop-shadow(-2px -2px 0 white);
+
+    /*border: 3px solid white;*/
+}
