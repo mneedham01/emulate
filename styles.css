@@ -38,10 +38,12 @@ body{
     position: relative; 
     top: 11vh;
     left: 42vh;
+    pointer-events: none;
 }
 
 .menu_img{
     width: 20vh;
+    pointer-events: none;
 }
 
 .expanded_menu{
@@ -49,11 +51,13 @@ body{
     top: -5vh;
     left: 42vh;
     visibility: hidden;
+    pointer-events: none;
 }
 
 .expanded_menu_img{
     position: absolute;
     width: 38vh;
+    pointer-events: none;
 }
 
 .svg{
@@ -61,6 +65,9 @@ body{
     top: -5vh;
     left:42vh;
     width: 38vh;
+    /* This allows the svg to be invisible 
+    but still clickable */
+    opacity: 0;
 }
 
 .emulate{
@@ -104,6 +111,9 @@ body{
     position: absolute;
     top: 90vh;
     display: grid;
+    /* Created a grid for the new works
+    Made up of 4 columns, the two middle columns
+    are twice as big as the side ones */
     grid-template-columns: 1fr repeat(2, 2fr) 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 30px;
