@@ -1,8 +1,14 @@
 // create a set of the folders/events 
 const letters = new Set(["yule","april-fools","craft-concert","halloween"]);
 
+// create a variable with the previous visited page 
+// in order to remove the photos when that page is left 
+
+
 // this function is called when the button for a particular event is pressed 
 function populate(id){
+    // first, call refresh 
+    refresh();
     // change all the other buttons to be transparent and the given one to be blue
     for (const event of letters) {
         if (event == id) {
@@ -12,7 +18,7 @@ function populate(id){
         }
     }
 
-    // i am sure there is a smarter way to do this but rly not sure howwww 
+    // i am sure there is a smarter way to do this
     var folder_size; 
     if (id == "april-fools") {
         folder_size = 55; 
@@ -39,15 +45,23 @@ function populate(id){
 }
 
 function refresh(){
-    let img;
-    for (let i = 1; i < 26; i++) {
-        img = document.getElementById("img" + i);
-        if (i < 26 / 2) {
-            document.getElementById("col1").removeChild(img);
-        } else {
-            document.getElementById("col2").removeChild(img);
-        }
+    // let img;
+    // remove image from column 1 and column 2 
+    let col1 = document.getElementById("col1");
+    let col2 = document.getElementById("col2");
+
+    while (col1.firstChild) {
+        col1.removeChild(col1.lastChild);
+        col2.removeChild(col2.lastChild);
     }
+    // for (let i = 1; i < 26; i++) {
+    //     img = document.getElementById("img" + i);
+    //     if (i < 26 / 2) {
+    //         document.getElementById("col1").removeChild(img);
+    //     } else {
+    //         document.getElementById("col2").removeChild(img);
+    //     }
+    // }
 }
 
 
