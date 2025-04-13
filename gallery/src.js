@@ -1,7 +1,17 @@
+// create a set of the folders/events 
+const letters = new Set(["yule","april-fools","craft-concert","halloween"]);
+
 // this function is called when the button for a particular event is pressed 
 function populate(id){
-    // first, change the color of the button to indicate it has been pressed 
-    document.getElementById(id).style.backgroundColor = "#27293D";
+    // change all the other buttons to be transparent and the given one to be blue
+    for (const event of letters) {
+        if (event == id) {
+            document.getElementById(event).style.backgroundColor = "#27293D";
+        } else {
+            document.getElementById(event).style.backgroundColor = "transparent";
+        }
+    }
+
     // i am sure there is a smarter way to do this but rly not sure howwww 
     var folder_size; 
     if (id == "april-fools") {
@@ -17,27 +27,13 @@ function populate(id){
         let img = document.createElement('img');
         // give the image a source 
         img.src = '../_archive/eventPhotos/' + id + '/' + i + '.jpg';
-        // alert("img.src = " + img.src);
-
         // place in appropriate column
         if (left_column) {
             document.getElementById("col1").appendChild(img);
         } else {
             document.getElementById("col2").appendChild(img);
         }
-
-        // if there is an error (if we have run out of photos), then
-        // img.onError = errorHandler();
-        
-        // // errorHandler function 
-        // function errorHandler() {
-        //     // alert("hello");
-        //     valid_address = false; 
-        // }
-
-        // increase the id 
-        // i++; 
-        // switch sides 
+        // change the column side 
         left_column = left_column ? false : true;
     }
 }
