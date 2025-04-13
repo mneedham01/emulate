@@ -2,26 +2,22 @@
 function populate(id){
     // first, change the color of the button to indicate it has been pressed 
     document.getElementById(id).style.backgroundColor = "#27293D";
-    // loop through the folder until there are no more files 
-    var valid_address = true; 
+    // i am sure there is a smarter way to do this but rly not sure howwww 
+    var folder_size; 
+    if (id == "april-fools") {
+        folder_size = 55; 
+    }
+    if (id == "yule") {
+        folder_size = 26;
+    }
     // establish the first side to be left
     var left_column = true; 
-    // establish the first address to be 1 
-    var i = 1; 
-    while (valid_address) {
+    // loop through the folder 
+    for (i =1; i < folder_size + 1; i++) {
         let img = document.createElement('img');
         // give the image a source 
         img.src = '../_archive/eventPhotos/' + id + '/' + i + '.jpg';
-        // if there is an error (if we have run out of photos), then
-        img.onLoad = onLoad();
-        
-        img.onError = errorHandler();
-        
-        // errorHandler function 
-        function errorHandler() {
-            // alert("hello");
-            valid_address = false; 
-        }
+        // alert("img.src = " + img.src);
 
         // place in appropriate column
         if (left_column) {
@@ -29,10 +25,20 @@ function populate(id){
         } else {
             document.getElementById("col2").appendChild(img);
         }
+
+        // if there is an error (if we have run out of photos), then
+        // img.onError = errorHandler();
+        
+        // // errorHandler function 
+        // function errorHandler() {
+        //     // alert("hello");
+        //     valid_address = false; 
+        // }
+
         // increase the id 
-        i++; 
+        // i++; 
         // switch sides 
-        left_column = false;
+        left_column = left_column ? false : true;
     }
 }
 
