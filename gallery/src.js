@@ -1,16 +1,17 @@
-// create a set of the folders/events 
-const letters = new Set(["yule","april-fools","craft-concert","halloween"]);
+// create a set of the folders/events (need to manually update when there is a new event)
+const events = new Set(["yule","april-fools","craft-concert","halloween"]);
 
-// create a variable with the previous visited page 
-// in order to remove the photos when that page is left 
-
+// sets to the most recent event (april fools open mic) when it loads
+window.addEventListener("load", populate("april-fools"));
 
 // this function is called when the button for a particular event is pressed 
 function populate(id){
     // first, call refresh 
+    // this deletes all of the items from col1 and col2
     refresh();
+
     // change all the other buttons to be transparent and the given one to be blue
-    for (const event of letters) {
+    for (const event of events) {
         if (event == id) {
             document.getElementById(event).style.backgroundColor = "#27293D";
         } else {
@@ -18,7 +19,8 @@ function populate(id){
         }
     }
 
-    // i am sure there is a smarter way to do this
+    // i am sure there is a smarter way to do this but i rly don't know how 
+    // if we had node.js (??) i think we would be able to read in the file 
     var folder_size; 
     if (id == "april-fools") {
         folder_size = 55; 
@@ -26,6 +28,10 @@ function populate(id){
     if (id == "yule") {
         folder_size = 26;
     }
+    if (id == "halloween") {
+        folder_size = 22;
+    }
+
     // establish the first side to be left
     var left_column = true; 
     // loop through the folder 
@@ -45,23 +51,15 @@ function populate(id){
 }
 
 function refresh(){
-    // let img;
-    // remove image from column 1 and column 2 
+    // remove images from column 1 and column 2 
     let col1 = document.getElementById("col1");
     let col2 = document.getElementById("col2");
-
     while (col1.firstChild) {
         col1.removeChild(col1.lastChild);
+    }
+    while (col2.firstChild) {
         col2.removeChild(col2.lastChild);
     }
-    // for (let i = 1; i < 26; i++) {
-    //     img = document.getElementById("img" + i);
-    //     if (i < 26 / 2) {
-    //         document.getElementById("col1").removeChild(img);
-    //     } else {
-    //         document.getElementById("col2").removeChild(img);
-    //     }
-    // }
 }
 
 
@@ -123,5 +121,3 @@ function randomElement(){
     element.src = image;
     random_rotate(id)
 }
-
-// window.addEventListener("load", randomElement);

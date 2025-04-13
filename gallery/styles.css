@@ -73,7 +73,6 @@ header {
     top: 20%;
 
     z-index: 0;
-
 }
 
 .row:after {
@@ -233,11 +232,11 @@ header {
 
     /*border: 3px solid white;*/
 }
-@keyframes scroll {
+/* @keyframes scroll {
     0% {
         transform: translateY(0);
     }
     100% {
         transform: translateY(-100%);
     }
-}
+} */
