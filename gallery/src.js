@@ -1,5 +1,5 @@
 // create a set of the folders/events (need to manually update when there is a new event)
-const events = new Set(["yule","april-fools","craft-concert","halloween"]);
+const events = new Set(["yule","april-fools","halloween"]);
 
 // sets to the most recent event (april fools open mic) when it loads
 window.addEventListener("load", populate("april-fools"));
@@ -120,4 +120,14 @@ function randomElement(){
     let image = '../_archive/collageElements/' + currentImg + '.png';
     element.src = image;
     random_rotate(id)
+}
+
+function change_color() {
+    let emulate = document.getElementById("emulate");
+    emulate.src = "../_archive/emulate/emulate_pink.png";
+}
+
+function change_back() {
+    let emulate = document.getElementById("emulate");
+    emulate.src = "../_archive/emulate/emulate_white.png";
 }
