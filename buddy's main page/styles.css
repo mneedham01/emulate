@@ -70,7 +70,15 @@ body{
     margin: 0 auto;
 }
 
+.website {
+    position: absolute;
+    z-index: 1;
 
+    width: 350px;
+    top: 40vh;
+    left: 35vh;
+    margin: 0 auto;
+}
 
 
 /*IMAGE TRAIL*/
