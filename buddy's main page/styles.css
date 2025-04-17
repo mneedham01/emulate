@@ -146,10 +146,10 @@ body{
 
     top: 90vh;
     left: 10vh;
-    width: 750px;
+    width: 100%;
 }
 .recents img{
-    width: 100%;
+    width: 750px;
 }
 
 .svg{
