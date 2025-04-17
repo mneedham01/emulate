@@ -139,6 +139,19 @@ body{
 
 
 
+
+.recents {
+    position: absolute;
+    z-index: 10;
+
+    top: 90vh;
+    left: 10vh;
+    width: 750px;
+}
+.recents img{
+    width: 100%;
+}
+
 .svg{
     position: absolute;
     top: 0vh;
