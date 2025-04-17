@@ -220,110 +220,7 @@ i {
     color: gray;
 }
 
-/* Paper stack order */
-/*#p1 {*/
-/*    z-index: 3;*/
-/*}*/
 
-/*#p2 {*/
-/*    z-index: 2;*/
-/*}*/
-
-/*#p3 {*/
-/*    z-index: 1;*/
-/*}*/
-
-/*img{*/
-/*    max-height: 500px;*/
-/*    max-width: 325px;*/
-/*}*/
-
-
-
-
-/*.container {*/
-/*    height: fit-content;*/
-/*    width: fit-content;*/
-
-/*}*/
-
-/*.archive-element {*/
-/*    z-index:0;*/
-/*}*/
-
-/*.archive-viewer {*/
-/*    position: absolute;*/
-/*    display: none;*/
-/*    margin: auto;*/
-/*    z-index: 999;*/
-
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    height: 90vh;*/
-/*    width: 90%;*/
-
-/*    border: 2px solid black;*/
-/*    box-shadow: 5px 3px black;*/
-/*    background-color: white;*/
-/*}*/
-
-/*img {*/
-/*    -webkit-filter: grayscale(100%); !* Safari 6.0 - 9.0 *!*/
-/*    filter: grayscale(100%);*/
-/*}*/
-
-
-/*img:hover {*/
-/*    -webkit-filter: grayscale(0%);*/
-/*    filter: none;*/
-/*}*/
-
-/*.button {*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    !*pointer-events: none*!*/
-
-/*    background-color: black;*/
-/*    color: white;*/
-/*    border: 0;*/
-/*    font-family: NT Bau Mono, monospace;*/
-/*}*/
-
-/*#move{*/
-/*    display: none;*/
-
-/*    height: fit-content;*/
-/*    left: 50%;*/
-/*    top: 50%;*/
-
-/*    transform: translate(-50%, -50%);*/
-/*    position: fixed;*/
-/*}*/
-
-/*.x-btn{*/
-/*    position: absolute;*/
-/*    right: 0;*/
-/*    top:0;*/
-
-/*    width: 30px;*/
-/*    height: 30px;*/
-
-/*    border: 2px solid white;*/
-/*}*/
-
-/*.enter-hover {*/
-/*    position: fixed;*/
-/*    background-color: #4b5263;*/
-/*    color: #abb2bf;*/
-/*    display: none;*/
-/*    top: 4em;*/
-/*    left: 4em;*/
-
-/*    font-size: small;*/
-/*    padding: .5em 3em .5em .5em;*/
-
-/*    z-index: 9999;*/
-/*}*/
 .content {
     position: absolute;
     display: block;
@@ -340,6 +237,9 @@ i {
     width: 100%;
 }
 
+/*
+LIBRARY STYLING
+*/
 
 .lib{
     position: relative;
@@ -405,9 +305,9 @@ i {
 .cover{
     position: absolute;
     display: inline;
+    /*width: 500px;*/
 
-    height: inherit;
-    transform: rotate3d(0, 1, 0, 80deg);
+    transform: rotate3d(0, 1, 0, 80deg) translateX(-500px);
 }
 
 .TOC{

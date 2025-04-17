@@ -183,7 +183,8 @@ function previewOn(Spine, Cover){
     let cover = document.getElementById(Cover)
 
     spine.style.transform = "rotate3d(1, 2, 0, 30deg) translateX(-30px) translateY(30px)"
-    cover.style.transform = "rotate3d(1, 2, 0, -70deg) translateX(-30px) translateY(30px)"
+    cover.style.transform = "rotate3d(-1, -2, 0, 65deg) translateX(-" + cover.offsetX + ") translateY(30px)"
+
     // x.style.zIndex = "1";
 
 }
