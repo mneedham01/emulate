@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+
+    <script src="src.js" defer></script>
+
+    <title>Emulate Magazine</title>
+</head>
+<body>
+
+<div class = "background">
+    <div class="overlay">
+        <div class="outer1"> </div>
+        <div class="outer2"> </div>
+        <div class="outer3"> </div>
+        <div class="outer4"> </div>
+    </div>
+
+    <div class="bg">
+
+    </div>
+    <!-- Scissors-->
+    <div class="scissors" id = "top" onclick="expand_menu()">
+        <img src="../_archive/buddys_stuff/scissors_right.png" class = "scissor_img_top"></img>
+    </div>
+    <div class="scissors" id = "bottom" onclick = "expand_menu()">
+        <img src="../_archive/buddys_stuff/scissors_left.png" class = "scissor_img_bottom"></img>
+    </div>
+
+    <!-- Menu -->
+    <div class = "menu" onclick = "expand_menu()">
+        <img src = "../_archive/menu/menu.png" class = "menu_img" id = "menu"></img>
+    </div>
+
+    <!-- Expanded Menu -->
+    <div class = "expanded_menu">
+    </div>
+    <div class = "expanded_menu">
+        <img src = "../_archive/menu/full_menu.png" class = "expanded_menu_img" id = "expanded_menu"></img>
+    </div>
+
+    <!-- Emulate -->
+    <div class = "emulate">
+        <img src = "../_archive/emulate/ripped_paper_no_background.png" class = "emulate_img"></img>
+    </div>
+    <img src="../_archive/buddys_stuff/coreTeamPixel.png" class="coreImg" alt="core-team">
+    <img src="../_archive/buddys_stuff/thisIsTheWebsite.png" class="website" alt="this is the website">
+
+    <div class="trailcontainer">
+        <img src="../_archive/letters/E/1.png"    class="image">
+        <img src="../_archive/letters/M/1.png"    class="image">
+        <img src="../_archive/letters/U/1.png"    class="image">
+        <img src="../_archive/letters/L/1.png"    class="image">
+        <img src="../_archive/letters/A/1.png"    class="image">
+        <img src="../_archive/letters/T/1.png"    class="image">
+
+        <img src="../_archive/letters/E/2.png"    class="image">
+        <img src="../_archive/letters/M/2.png"    class="image">
+        <img src="../_archive/letters/U/2.png"    class="image">
+        <img src="../_archive/letters/L/2.png"    class="image">
+        <img src="../_archive/letters/A/2.png"    class="image">
+        <img src="../_archive/letters/T/2.png"    class="image">
+
+        <img src="../_archive/letters/E/3.png"    class="image">
+        <img src="../_archive/letters/M/3.png"    class="image">
+        <img src="../_archive/letters/U/3.png"    class="image">
+        <img src="../_archive/letters/L/3.png"    class="image">
+        <img src="../_archive/letters/A/3.png"    class="image">
+        <img src="../_archive/letters/T/3.png"    class="image">
+
+        <img src="../_archive/letters/E/4.png"    class="image">
+        <img src="../_archive/letters/M/4.png"    class="image">
+        <img src="../_archive/letters/U/4.png"    class="image">
+        <img src="../_archive/letters/L/4.png"    class="image">
+        <img src="../_archive/letters/A/4.png"    class="image">
+        <img src="../_archive/letters/T/4.png"    class="image">
+
+        <img src="../_archive/letters/E/5.png"    class="image">
+        <img src="../_archive/letters/M/5.png"    class="image">
+        <img src="../_archive/letters/U/5.png"    class="image">
+        <img src="../_archive/letters/L/5.png"    class="image">
+        <img src="../_archive/letters/A/5.png"    class="image">
+        <img src="../_archive/letters/T/5.png"    class="image">
+
+        <img src="../_archive/letters/E/6.png"    class="image">
+        <img src="../_archive/letters/M/6.png"    class="image">
+        <img src="../_archive/letters/U/6.png"    class="image">
+        <img src="../_archive/letters/L/6.png"    class="image">
+        <img src="../_archive/letters/A/6.png"    class="image">
+        <img src="../_archive/letters/T/6.png"    class="image">
+
+        <img src="../_archive/letters/E/7.png"    class="image">
+        <img src="../_archive/letters/M/7.png"    class="image">
+        <img src="../_archive/letters/U/7.png"    class="image">
+        <img src="../_archive/letters/L/7.png"    class="image">
+        <img src="../_archive/letters/A/7.png"    class="image">
+        <img src="../_archive/letters/T/7.png"    class="image">
+
+        <img src="../_archive/letters/E/8.png"    class="image">
+        <img src="../_archive/letters/M/8.png"    class="image">
+        <img src="../_archive/letters/U/8.png"    class="image">
+        <img src="../_archive/letters/L/8.png"    class="image">
+        <img src="../_archive/letters/A/8.png"    class="image">
+        <img src="../_archive/letters/T/8.png"    class="image">
+
+        <img src="../_archive/letters/E/9.png"    class="image">
+        <img src="../_archive/letters/M/9.png"    class="image">
+        <img src="../_archive/letters/U/9.png"    class="image">
+        <img src="../_archive/letters/L/9.png"    class="image">
+        <img src="../_archive/letters/A/9.png"    class="image">
+        <img src="../_archive/letters/T/9.png"    class="image">
+
+        <img src="../_archive/letters/E/10.png"    class="image">
+        <img src="../_archive/letters/M/10.png"    class="image">
+        <img src="../_archive/letters/U/10.png"    class="image">
+        <img src="../_archive/letters/L/10.png"    class="image">
+        <img src="../_archive/letters/A/10.png"    class="image">
+        <img src="../_archive/letters/T/10.png"    class="image">
+
+        <img src="../_archive/letters/E/11.png"    class="image">
+        <img src="../_archive/letters/M/11.png"    class="image">
+        <img src="../_archive/letters/U/11.png"    class="image">
+        <img src="../_archive/letters/L/11.png"    class="image">
+        <img src="../_archive/letters/A/11.png"    class="image">
+        <img src="../_archive/letters/T/11.png"    class="image">
+
+    </div>
+
+
+    <div class = "new_work">
+<!--        <div class = "div1">-->
+<!--            new work 1-->
+<!--            <div></div>-->
+<!--            <img src = "../_archive/doodles/1.png"></img>-->
+<!--        </div>-->
+<!--        <div class = "div2">-->
+<!--            new work 2-->
+<!--            <div></div>-->
+<!--            <img src = "../_archive/doodles/2.png"><div></div>-->
+<!--        </div>-->
+<!--        <div class = "div3">-->
+<!--            new work 3-->
+<!--            <div></div>-->
+<!--            <img src = "../_archive/doodles/3.png"><div></div>-->
+<!--        </div>-->
+<!--        <div class = "div4">-->
+<!--            new work 4-->
+<!--            <div></div>-->
+<!--            <img src = "../_archive/doodles/4.png"><div></div>-->
+<!--        </div>-->
+
+<!--        <button> UP </button>-->
+    </div>
+
+    <!--
+     <div class = "star">
+         <img src = "_archive/png_doodles/fast-animation.png" class = "star_img"></img>
+     </div>
+
+     <div class = "star2">
+         <img src = "_archive/png_doodles/fast-animation.png" class = "star2_img"></img>
+     </div>
+     -->
+
+    <!--
+    <div class = "bulletin-board">
+        <img src="_archive/backgrounds/bulletinBoard.png" alt="bulletin-board">
+    </div>
+    -->
+</div>
+<div class = "recents">
+    <img src = "../_archive/buddys_stuff/recentWorks.png" class = "menu_img" id = "recent" alt="recent works">
+    <div class="6-2">
+        <img src="../_archive/library/magazines/6.2/1.png" alt="zine">
+    </div>
+
+</div>
+</body>
+</html>

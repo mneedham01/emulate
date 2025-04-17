@@ -2,7 +2,7 @@ body{
     width: 100vh;
     height: 100vh;
 
-    background-image: url(_archive/backgrounds/graphpaper.jpg);
+    background-image: url(graphpaper.jpg);
     background-repeat: repeat;
     background-size: cover;
 }
