@@ -2,7 +2,6 @@ let expanded = false;
 
 function menu() {
     if (expanded) {
-        alert("hello");
         shrink_menu();
         expanded = false;
     } else {
@@ -44,7 +43,7 @@ function shrink_menu() {
     let expanded_menu = document.getElementById("expanded_menu");
     let top = document.getElementById("top_img");
     let bottom =document.getElementById("bottom_img");
-    
+
     top.animate(
         { transform: ["rotate(10deg)", "rotate(0deg)"] },
         { duration: 1000, fill: "forwards" }

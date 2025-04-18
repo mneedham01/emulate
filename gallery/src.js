@@ -4,9 +4,14 @@ const events = new Set(["yule","april-fools","halloween"]);
 // sets to the most recent event (april fools open mic) when it loads
 window.addEventListener("load", populate("april-fools"));
 
+// keep track of the current tab (for the highlighting function)
+var tab = "april-fools";
+
 // this function is called when the button for a particular event is pressed 
 function populate(id){
-    // first, call refresh 
+    // turn text white 
+    change_back(id);
+    
     // this deletes all of the items from col1 and col2
     refresh();
 
@@ -48,6 +53,9 @@ function populate(id){
         // change the column side 
         left_column = left_column ? false : true;
     }
+
+    // then, set tab 
+    tab = id;
 }
 
 function refresh(){
@@ -122,12 +130,26 @@ function randomElement(){
     random_rotate(id)
 }
 
-function change_color() {
-    let emulate = document.getElementById("emulate");
-    emulate.src = "../_archive/emulate/emulate_pink.png";
+function change_color(id) {
+    // if you are already on the page, don't highlight pink on mouse over 
+    if (id == tab) {
+        return;
+    }
+    let elem  = document.getElementById(id);
+    // need to change the photo for this one 
+    if (id=="emulate"){
+        elem.src = "../_archive/emulate/emulate_pink.png";
+    } else {
+        elem.style.color = "HotPink";
+    }
 }
 
-function change_back() {
-    let emulate = document.getElementById("emulate");
-    emulate.src = "../_archive/emulate/emulate_white.png";
+function change_back(id) {
+    let elem  = document.getElementById(id);
+    // need to change the photo for this one 
+    if (id=="emulate"){
+        elem.src = "../_archive/emulate/emulate_white.png";
+    } else {
+        elem.style.color = "white";
+    }
 }
