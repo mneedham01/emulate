@@ -58,10 +58,13 @@ body{
 }
 
 .svg{
-    
+    width: 38vh;
+    position: absolute;
+    top: 0vh;
+    left: 35vh;
     /* This allows the svg to be invisible 
     but still clickable */
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .coreImg{
@@ -155,13 +158,6 @@ body{
 }
 .recents img{
     width: 750px;
-}
-
-.svg{
-    position: absolute;
-    top: 0vh;
-    transform: scale(0.1);
-    visibility: visible;
 }
 
 .emulate{
