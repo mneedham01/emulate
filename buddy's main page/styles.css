@@ -23,13 +23,13 @@ body{
 .scissor_img_top{
     height: 40vh;
     width: auto;
-    rotate: -80deg;
+    rotate: -90deg;
 }
 
 .scissor_img_bottom{
     height: 40vh;
     width: auto;
-    rotate: -100deg;
+    rotate: -90deg;
 }
 
 .menu{
@@ -37,7 +37,7 @@ body{
     height: 5vh;
 
     position: relative;
-    top: 11vh;
+    top: 12vh;
     left: 35vh;
 }
 

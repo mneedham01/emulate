@@ -1,9 +1,70 @@
-function expand_menu(){
-    let menu = document.getElementById("menu");
-    menu.style.visibility = "hidden";
+let expanded = false;
 
+function menu() {
+    if (expanded) {
+        alert("hello");
+        shrink_menu();
+        expanded = false;
+    } else {
+        expand_menu();
+        expanded = true;
+    }
+}
+
+function expand_menu () { 
+    let menu = document.getElementById("menu");
     let expanded_menu = document.getElementById("expanded_menu");
+    let top = document.getElementById("top_img");
+    let bottom =document.getElementById("bottom_img");
+
+    top.animate(
+        { transform: ["rotate(0deg)", "rotate(10deg)"] },
+        { duration: 1000, fill: "forwards" }
+    );
+    bottom.animate(
+        { transform: ["rotate(0deg)", "rotate(-10deg)"] },
+        { duration: 1000, fill: "forwards" }
+    );
+    menu.animate(
+        { opacity: [1, 0] },
+        { duration: 1000, fill: "forwards" }
+    );
+    expanded_menu.animate(
+        { opacity: [0, 1] },
+        { duration: 500, fill: "forwards" }
+    );
+
+    // is this right tbh 
+    menu.style.visibility = "hidden";
     expanded_menu.style.visibility = "visible";
+}
+
+function shrink_menu() {
+    let menu = document.getElementById("menu");
+    let expanded_menu = document.getElementById("expanded_menu");
+    let top = document.getElementById("top_img");
+    let bottom =document.getElementById("bottom_img");
+    
+    top.animate(
+        { transform: ["rotate(10deg)", "rotate(0deg)"] },
+        { duration: 1000, fill: "forwards" }
+    );
+    bottom.animate(
+        { transform: ["rotate(-10deg)", "rotate(0deg)"] },
+        { duration: 1000, fill: "forwards" }
+    );
+    menu.animate(
+        { opacity: [0, 1] },
+        { duration: 500, fill: "forwards" }
+    );
+    expanded_menu.animate(
+        { opacity: [1, 0] },
+        { duration: 500, fill: "forwards" }
+    );
+
+    // is this right tbh 
+    menu.style.visibility = "visible";
+    expanded_menu.style.visibility = "hidden";
 }
 
 // function getImages(){
