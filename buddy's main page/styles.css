@@ -15,8 +15,6 @@ body{
     /* This height causes the two scissor images to overlap */
     height: 0vh;
 
-    background-color: aqua;
-
     position: relative;
     top: -4vh;
     left: 10vh;
@@ -57,6 +55,13 @@ body{
 .expanded_menu_img{
     position: absolute;
     width: 38vh;
+}
+
+.svg{
+    
+    /* This allows the svg to be invisible 
+    but still clickable */
+    /* opacity: 0; */
 }
 
 .coreImg{
