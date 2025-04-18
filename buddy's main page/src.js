@@ -18,15 +18,15 @@ function expand_menu () {
 
     top.animate(
         { transform: ["rotate(0deg)", "rotate(10deg)"] },
-        { duration: 1000, fill: "forwards" }
+        { duration: 1500, fill: "forwards" }
     );
     bottom.animate(
         { transform: ["rotate(0deg)", "rotate(-10deg)"] },
-        { duration: 1000, fill: "forwards" }
+        { duration: 1500, fill: "forwards" }
     );
     menu.animate(
         { opacity: [1, 0] },
-        { duration: 1000, fill: "forwards" }
+        { duration: 500, fill: "forwards" }
     );
     expanded_menu.animate(
         { opacity: [0, 1] },
@@ -46,11 +46,11 @@ function shrink_menu() {
 
     top.animate(
         { transform: ["rotate(10deg)", "rotate(0deg)"] },
-        { duration: 1000, fill: "forwards" }
+        { duration: 1500, fill: "forwards" }
     );
     bottom.animate(
         { transform: ["rotate(-10deg)", "rotate(0deg)"] },
-        { duration: 1000, fill: "forwards" }
+        { duration: 1500, fill: "forwards" }
     );
     menu.animate(
         { opacity: [0, 1] },
@@ -81,7 +81,7 @@ function shrink_menu() {
 // }
 // const images = getImages();
 
-const displayDistance = 100 // distance in px to display another photo
+const displayDistance = 20 // distance in px to display another photo
 const nDisplay = 7 // number of pictures to display at once
 
 const images = document.getElementsByClassName("image")
@@ -94,6 +94,7 @@ function activatePic(img, x, y){
     img.style.display = "block"
     img.style.left = `${x}px`
     img.style.top = `${y}px`
+    img.style.width = "2vh"
     img.style.zIndex = globalIndex // otherwise the last pic will always be at the top
     lastMousePosition = {x: x, y: y} // update the last mouse position
 }

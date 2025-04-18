@@ -2,7 +2,7 @@ body{
     width: 100vh;
     height: 100vh;
 
-    background-image: url(../_archive/backgrounds/graphpaper.jpg);
+    background-image: url(../_archive/buddys_stuff/coreTeamPixel.png);
     background-repeat: repeat;
     background-size: cover;
     margin: 0;
@@ -18,6 +18,7 @@ body{
     position: relative;
     top: -4vh;
     left: 10vh;
+    z-index: 999;
 }
 
 .scissor_img_top{
@@ -29,7 +30,7 @@ body{
 .scissor_img_bottom{
     height: 40vh;
     width: auto;
-    rotate: -90eg;
+    rotate: -90deg;
 }
 
 .menu{
@@ -82,7 +83,7 @@ body{
     position: absolute;
     z-index: 1;
 
-    width: 350px;
+    width: 40vh;
     top: 40vh;
     left: 35vh;
     margin: 0 auto;
