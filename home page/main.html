@@ -23,9 +23,13 @@
         <div class="outer4"> </div>
     </div>
 
-    <div class="bg">
+    <div class="bg"></div>
 
-    </div>
+    <!-- This div blocks off the scissors and the menu from the trailing mouse images -->
+    <!-- <div class = "scissor-block1" id = "scissor-block1" onmouseover="block()" onmouseout="unblock()">  </div>
+    <div class = "scissor-block2" id = "scissor-block2"onmouseover="block()" onmouseout="unblock()">  </div>
+    <div class = "menu-block" id = "menu-block">  </div> -->
+
     <!-- Scissors-->
     <div class="scissors" id = "top" onclick="menu()">
         <img src="../_archive/buddys_stuff/scissors_right.png" class = "scissor_img_top" id = "top_img"></img>
@@ -50,11 +54,17 @@
 
     <!-- Emulate -->
     <div class = "emulate">
-        <img src = "../_archive/emulate/ripped_paper_no_background.png" class = "emulate_img"></img>
+        <a href="main.html"> 
+            <img src = "../_archive/emulate/ripped_paper_no_background.png" class = "emulate_img"></img>
+        </a>
     </div>
-    <!-- <img src="../_archive/buddys_stuff/coreTeamPixel.png" class="coreImg" alt="core-team"> -->
-    <img src="../_archive/buddys_stuff/thisIsTheWebsite.png" class="website" alt="this is the website">
+    <!-- This is the Website (link to loading)-->
+    <a href = "../load page/loading.html">
+        <img src="../_archive/buddys_stuff/thisIsTheWebsite.png" class="website" alt="this is the website">
+    </a>
+    
 
+    <!-- Emulate Trail-->
     <div class="trailcontainer">
         <img src="../_archive/letters/E/1.png"    class="image">
         <img src="../_archive/letters/M/1.png"    class="image">
@@ -132,57 +142,15 @@
         <img src="../_archive/letters/L/11.png"    class="image">
         <img src="../_archive/letters/A/11.png"    class="image">
         <img src="../_archive/letters/T/11.png"    class="image">
-
     </div>
 
-
-    <div class = "new_work">
-<!--        <div class = "div1">-->
-<!--            new work 1-->
-<!--            <div></div>-->
-<!--            <img src = "../_archive/doodles/1.png"></img>-->
-<!--        </div>-->
-<!--        <div class = "div2">-->
-<!--            new work 2-->
-<!--            <div></div>-->
-<!--            <img src = "../_archive/doodles/2.png"><div></div>-->
-<!--        </div>-->
-<!--        <div class = "div3">-->
-<!--            new work 3-->
-<!--            <div></div>-->
-<!--            <img src = "../_archive/doodles/3.png"><div></div>-->
-<!--        </div>-->
-<!--        <div class = "div4">-->
-<!--            new work 4-->
-<!--            <div></div>-->
-<!--            <img src = "../_archive/doodles/4.png"><div></div>-->
-<!--        </div>-->
-
-<!--        <button> UP </button>-->
+    <div class = "recents">
+        <img src = "../_archive/buddys_stuff/recentWorks.png" class = "menu_img" id = "recent" alt="recent works">
+        <div class="6-2">
+            <img src="../_archive/library/magazines/6.2/1.png" alt="zine">
+        </div>
     </div>
-
-    <!--
-     <div class = "star">
-         <img src = "_archive/png_doodles/fast-animation.png" class = "star_img"></img>
-     </div>
-
-     <div class = "star2">
-         <img src = "_archive/png_doodles/fast-animation.png" class = "star2_img"></img>
-     </div>
-     -->
-
-    <!--
-    <div class = "bulletin-board">
-        <img src="_archive/backgrounds/bulletinBoard.png" alt="bulletin-board">
-    </div>
-    -->
-</div>
-<div class = "recents">
-    <img src = "../_archive/buddys_stuff/recentWorks.png" class = "menu_img" id = "recent" alt="recent works">
-    <div class="6-2">
-        <img src="../_archive/library/magazines/6.2/1.png" alt="zine">
-    </div>
-
+    
 </div>
 </body>
 </html>
