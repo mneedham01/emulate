@@ -26,7 +26,7 @@ function createBook(issue, numPg){
         let page = document.createElement("div")
         book.append(page)
         page.id = "p" + i;
-        page.style.zIndex = i.toString()
+        page.style.zIndex = (numPg - i + 3).toString()
         page.classList.add("paper")
 
         let front = document.createElement("div")
@@ -49,12 +49,12 @@ function createBook(issue, numPg){
 
         let fimg = document.createElement("img")
         let bimg = document.createElement("img")
-        fimg.scr = '../_archive/library/magazines/' + issue + '/' + pg + '.png'
+        fimg.src = '../_archive/library/magazines/zine1/' + pg + '.png'
         pg++
-        bimg.scr = '../_archive/library/magazines/' + issue + '/' + pg + '.png'
+        bimg.src = '../_archive/library/magazines/zine1/' + pg + '.png'
         pg++
-        document.getElementById("f" + i).append(fimg)
-        document.getElementById("b" + i).append(bimg)
+        f.append(fimg)
+        b.append(bimg)
     }
 
 }
@@ -76,88 +76,89 @@ function closeBook(isAtBeginning) {
     nextBtn.style.transform = "translateX(0px)";
 }
 
-function goNextPage(){
-    let paper = "#p" + currentLocation + 1
-    let id = document.querySelector(paper);
-
-    let zIndex = currentLocation + 1;
-    if(currentLocation <= maxLocation) {
-        if(currentLocation === tPages){
-            closeBook(false);
-        }else if(currentLocation === 0){
-            openBook();
-        }
-        id.classList.add("flipped")
-        id.style.zIndex = zIndex.toString()
-    }
-    currentLocation++;
-}
-
-function goPrevPage(){
-    let paper = "#p" + currentLocation + 1
-    let id = document.querySelector(paper);
-
-    let zIndex = maxLocation - currentLocation
-    if(currentLocation > 0 && currentLocation <= tPages){
-        if(currentLocation === 1){
-            closeBook(true);
-        }else if(currentLocation === tPages){
-            openBook();
-        }
-        id.classList.remove("flipped")
-        id.style.zIndex = zIndex.toString()
-    }
-    currentLocation--;
-}
-
-// function goNextPage() {
-//     if(currentLocation < maxLocation) {
-//         switch(currentLocation) {
-//             case 0:
-//                 openBook();
-//                 paper1.classList.add("flipped");
-//                 paper1.style.zIndex = "1";
-//                 break;
-//             case 1:
-//                 paper2.classList.add("flipped");
-//                 paper2.style.zIndex = "2";
-//                 break;
-//             case 2:
-//                 paper3.classList.add("flipped");
-//                 paper3.style.zIndex = "3";
-//                 closeBook(false);
-//                 break;
-//             default:
-//                 throw new Error("unknown state");
-//         }
-//         currentLocation++;
-//     }
-// }
-
-// function goPrevPage() {
-//     if(currentLocation > 0) {
-//         switch(currentLocation) {
-//             case 1:
-//                 closeBook(true);
-//                 paper1.classList.remove("flipped");
-//                 paper1.style.zIndex = 3;
-//                 break;
-//             case 2:
-//                 paper2.classList.remove("flipped");
-//                 paper2.style.zIndex = 2;
-//                 break;
-//             case 3:
-//                 openBook();
-//                 paper3.classList.remove("flipped");
-//                 paper3.style.zIndex = 1;
-//                 break;
-//             default:
-//                 throw new Error("unkown state");
-//         }
+// function goNextPage(){
+//     // let paper = "#p" + currentLocation + 1
+//     let id = document.getElementById("p" + currentLocation + 1);
 //
-//         currentLocation--;
+//     let zIndex = currentLocation + 4;
+//     if(currentLocation <= maxLocation) {
+//         if(currentLocation === tPages){
+//             closeBook(false);
+//         }else if(currentLocation === 0){
+//             openBook();
+//         }
+//         id.classList.add("flipped")
+//         id.style.zIndex = zIndex.toString()
 //     }
+//     currentLocation++;
 // }
+//
+// function goPrevPage(){
+//     // let paper = "#p" + currentLocation + 1
+//     let id = document.getElementById("p" + currentLocation + 1);
+//
+//     let zIndex = maxLocation - currentLocation + 3;
+//     if(currentLocation > 0 && currentLocation <= tPages){
+//         if(currentLocation === 1){
+//             closeBook(true);
+//         }else if(currentLocation === tPages){
+//             openBook();
+//         }
+//         id.classList.remove("flipped")
+//         id.style.zIndex = zIndex.toString()
+//     }
+//     currentLocation--;
+// }
+
+
+function goNextPage() {
+    if(currentLocation < maxLocation) {
+        switch(currentLocation) {
+            case 0:
+                openBook();
+                p1.classList.add("flipped");
+                p1.style.zIndex = "4";
+                break;
+            case 1:
+                p2.classList.add("flipped");
+                p2.style.zIndex = "5";
+                break;
+            case 2:
+                p3.classList.add("flipped");
+                p3.style.zIndex = "6";
+                closeBook(false);
+                break;
+            default:
+                throw new Error("unknown state");
+        }
+        currentLocation++;
+    }
+}
+
+function goPrevPage() {
+    if(currentLocation > 0) {
+        switch(currentLocation) {
+            case 1:
+                closeBook(true);
+                p1.classList.remove("flipped");
+                p1.style.zIndex = 3+3;
+                break;
+            case 2:
+                p2.classList.remove("flipped");
+                p2.style.zIndex = 2+3;
+                break;
+            case 3:
+                openBook();
+                p3.classList.remove("flipped");
+                p3.style.zIndex = 1+3;
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+
+        currentLocation--;
+    }
+}
 
 function exit(iD){
     location.reload()
@@ -175,7 +176,7 @@ function openMenu(){
 function openViewer(iD, elmt){
     let x = document.getElementById(iD);
     x.style.display = "flex"
-    createBook(elmt, 20)
+    createBook("zine1", 3)
 }
 
 function previewOn(Spine, Cover){
